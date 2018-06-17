@@ -1,11 +1,13 @@
 .contact{
-    font-size: 18px;
+    font-size: 16px;
     color: gray;
 }
 
 .contact a{
     color: gray;
     text-decoration: none;
+    
+    border-left: 1px solid rgba(128, 128, 128, .2);
 }
 
 .contact a:hover{
@@ -14,4 +16,8 @@
 
 .header{
     margin-top: 20px;
+}
+
+#pageTitle{
+    text-align: center;
 }
