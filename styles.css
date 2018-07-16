@@ -12,19 +12,18 @@
     font-weight: 700;
     padding-left: 100px;
 }
-.contact{
+.nav{
     font-size: 20px;
     color: gray;
 }
 
-.contact a{
+.nav a{
     color: gray;
     text-decoration: none;
-    
-    border-left: 1px solid rgba(128, 128, 128, .2);
 }
 
-.contact a:hover{
+.nav a:hover{
+    cursor: pointer;
     color: black;
     font-weight: 600;
 }
