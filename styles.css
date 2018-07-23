@@ -7,33 +7,29 @@ a{
     text-decoration: none;
 }
 
-.pageContentNav h2 {
-    font-size: 25px;
-	float: left;	
-	margin-bottom: 0px;
-}
-
-.pageContent p {
-	word-wrap: break-word;
-	float: right;
-}
-
-.header h1{
-    font-size: 50px !important;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-    padding-left: 100px;
-}
-.nav{
-	padding-top: 5px;
-    font-size: 20px;
-    color: gray;
-    margin-top: 20px;
-}
-
 a:hover{
     cursor: pointer;
     color: black;
     font-weight: 600;
     text-decoration: none;
+}
+
+.pageContentNav{
+	margin-top: 20px;
+}
+
+.pageContentNav a {
+    font-size: 20px;	
+}
+
+.header h1{
+	padding-left: 50px;
+    font-size: 50px !important;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+.nav{
+    font-size: 20px;
+    color: gray;
 }
