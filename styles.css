@@ -2,6 +2,22 @@
     font-family:"Roboto";
 }
 
+a{
+    color: gray;
+    text-decoration: none;
+}
+
+.pageContentNav h2 {
+    font-size: 20px;
+	float: left;	
+	margin-bottom: 0px;
+}
+
+.pageContent p {
+	word-wrap: break-word;
+	float: right;
+}
+
 .header{
     margin-top: 20px;
 }
@@ -13,17 +29,14 @@
     padding-left: 100px;
 }
 .nav{
-    font-size: 20px;
+	padding-top: 5px;
+    font-size: 18px;
     color: gray;
 }
 
-.nav a{
-    color: gray;
-    text-decoration: none;
-}
-
-.nav a:hover{
+a:hover{
     cursor: pointer;
     color: black;
     font-weight: 600;
+    text-decoration: none;
 }
