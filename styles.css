@@ -1,3 +1,13 @@
+@media (max-width: 780px) {
+	h1{
+		text-align: center;
+	}
+	.nav {
+		text-align: center;
+		margin-left: 45px;
+	}
+}
+
 *{
     font-family:"Roboto";
 }
@@ -14,11 +24,14 @@ a:hover{
     text-decoration: none;
 }
 
-.pageContentNav{
+.page{
+	min-width: 390px;
+}
+.pageNav{
 	margin-top: 20px;
 }
 
-.pageContentNav a {
+.pageNav a {
     font-size: 20px;	
 }
 
