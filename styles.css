@@ -7,6 +7,7 @@ a{
     text-decoration: none;
 }
 
+
 a:hover{
     cursor: pointer;
     color: black;
@@ -44,6 +45,10 @@ a:hover{
 	.pageNav a {
 		font-size: 15px;	
 	}
+	
+	.centreAlign {
+		text-align: right;
+	}
 }
 
 @media only screen and (max-width: 768px) {
@@ -62,5 +67,8 @@ a:hover{
 	.nav {
 		text-align: center;
 		margin-left: 0px;
+	}
+	.centreAlign {
+		text-align: center;
 	}
 }
