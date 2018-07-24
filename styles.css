@@ -7,7 +7,6 @@ a{
     text-decoration: none;
 }
 
-
 a:hover{
     cursor: pointer;
     color: black;
@@ -24,7 +23,6 @@ a:hover{
 }
 
 .header h1 {
-	padding-left: 50px;
     font-size: 50px;
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -46,29 +44,29 @@ a:hover{
 		font-size: 15px;	
 	}
 	
-	.centreAlign {
+	.pageContent {
 		text-align: right;
-  }
+	}
+	
 	.pageContent h2{
 		font-size: 30px;
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {	
+	.header {
+		text-align: center;
+	}
+	
+	.nav{
+		padding: 0;
+	}
+	
 	.pageContent {
 		text-align: center;
 	}
 	
-	.header {
-		text-align: center;
-		margin-left: 0px;
-	}
-	.centreAlign {
-		text-align: center;
-  }
-	
 	.header h1 {
-		padding-left: 0px;
 		font-size: 50px;
 	}
 }
