@@ -81,11 +81,11 @@ footer a {
 
 	.panel-right .panel-body{
 		margin-left: 0;
-		text-align: left;
+		text-align: center;
 	}
 
 	.panel-right h3{
-		text-align: left;
+		text-align: center;
 	}
 }
 
@@ -112,10 +112,10 @@ footer a {
 
 	.panel-right .panel-body{
 		margin-left: 0;
-		text-align: left;
+		text-align: center;
 	}
 
 	.panel-right h3{
-		text-align: left;
+		text-align: center;
 	}
 }
