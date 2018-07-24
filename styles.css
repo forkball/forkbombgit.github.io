@@ -87,6 +87,10 @@ footer a {
 	.panel-right h3{
 		text-align: center;
 	}
+	
+	.panel h3{
+		font-size: 15px;
+	}
 }
 
 @media only screen and (max-width: 768px) {	
