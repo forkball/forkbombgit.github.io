@@ -19,6 +19,10 @@ a:hover{
 	min-width: 320px;
 }
 
+.header{
+	margin-top: 20px;
+}
+
 .header h1 {
 	padding-left: 50px;
     font-size: 50px;
@@ -26,11 +30,7 @@ a:hover{
     font-weight: 700;
 }
 
-.pageNav{
-	margin-top: 20px;
-}
-
-.pageNav a {
+.header a {
     font-size: 20px;	
     color: gray;
 }
@@ -42,33 +42,33 @@ a:hover{
 		font-size: 30px;
 	}
 	
-	.pageNav a {
+	.header a {
 		font-size: 15px;	
 	}
 	
 	.centreAlign {
 		text-align: right;
+  }
+	.pageContent h2{
+		font-size: 30px;
 	}
 }
 
 @media only screen and (max-width: 768px) {
-	.header h1 {
-		padding-left: 0px;
-		text-align: center;
-		font-size: 50px;
-	}
-	p{
-		margin-left: 10px;
-	}
-	.container{
+	.pageContent {
 		text-align: center;
 	}
 	
-	.nav {
+	.header {
 		text-align: center;
 		margin-left: 0px;
 	}
 	.centreAlign {
 		text-align: center;
+  }
+	
+	.header h1 {
+		padding-left: 0px;
+		font-size: 50px;
 	}
 }
