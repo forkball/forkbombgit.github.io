@@ -75,8 +75,17 @@ footer a {
 		font-size: 20px;
 	}
 	
-	.panel-right{
-		margin-left: 0%;
+	.panel-left .panel-body{
+		margin-right: 0;
+	}
+
+	.panel-right .panel-body{
+		margin-left: 0;
+		text-align: left;
+	}
+
+	.panel-right h3{
+		text-align: left;
 	}
 }
 
@@ -97,7 +106,16 @@ footer a {
 		font-size: 40px;
 	}
 	
-	.panel-right{
-		margin-left: 0%;
+	.panel-left .panel-body{
+		margin-right: 0;
+	}
+
+	.panel-right .panel-body{
+		margin-left: 0;
+		text-align: left;
+	}
+
+	.panel-right h3{
+		text-align: left;
 	}
 }
