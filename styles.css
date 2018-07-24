@@ -7,9 +7,9 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+a:hover, a:focus{
+	color: gray;
     cursor: pointer;
-    color: black;
     font-weight: 600;
     text-decoration: none;
 }
@@ -18,29 +18,38 @@ a:hover{
 	min-width: 320px;
 }
 
-.header{
+header{
 	margin-top: 20px;
 }
 
-.header h1 {
+header h1 {
     font-size: 50px;
-    letter-spacing: -0.02em;
+	letter-spacing: 10px;
     font-weight: 700;
+	padding-left: 25px;
 }
 
-.header a {
+header a {
     font-size: 20px;	
     color: gray;
 }
 
+footer {
+	text-align: center;
+}
+
+footer a {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 @media only screen and (max-width: 576px) {
-	.header h1 {
-		font-size: 40px !important;
+	header h1 {
+		font-size: 20px !important;
 		text-align: center;
-		font-size: 30px;
+		padding-left: 0px;
 	}
 	
-	.header a {
+	header a {
 		font-size: 15px;	
 	}
 	
@@ -49,12 +58,12 @@ a:hover{
 	}
 	
 	.pageContent h2{
-		font-size: 30px;
+		font-size: 20px;
 	}
 }
 
 @media only screen and (max-width: 768px) {	
-	.header {
+	header {
 		text-align: center;
 	}
 	
@@ -66,7 +75,7 @@ a:hover{
 		text-align: center;
 	}
 	
-	.header h1 {
-		font-size: 50px;
+	header h1 {
+		font-size: 40px;
 	}
 }
