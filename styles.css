@@ -48,11 +48,19 @@ a:hover{
 
 @media only screen and (max-width: 768px) {
 	.header h1 {
+		padding-left: 0px;
 		text-align: center;
 		font-size: 50px;
 	}
+	p{
+		margin-left: 10px;
+	}
+	.container{
+		text-align: center;
+	}
+	
 	.nav {
 		text-align: center;
-		margin-left: 45px;
+		margin-left: 0px;
 	}
 }
