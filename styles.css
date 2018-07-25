@@ -7,10 +7,6 @@ a{
     text-decoration: none;
 }
 
-h2{
-	padding-bottom: 10px;
-}
-
 a:hover, a:focus{
 	color: gray;
     cursor: pointer;
@@ -20,7 +16,6 @@ a:hover, a:focus{
 
 .page{
 	min-width: 320px;
-    background-color: transparent;
 }
 
 header{
@@ -31,12 +26,6 @@ header h1 {
     font-size: 50px;
 	letter-spacing: 10px;
     font-weight: 700;
-	padding-left: 25px;
-}
-
-.row-reverse {
-	display: flex; 
-	flex-direction: row-reverse;
 }
 
 .nav a {
@@ -87,25 +76,12 @@ footer a {
 		font-size: 15px;	
 	}
 	
-	.pageContent {
-		text-align: right;
-	}
-	
 	.pageContent h2{
 		font-size: 20px;
 	}
 	
-	.panel-left .panel-body{
-		margin-right: 0;
-	}
-
-	.panel-right .panel-body{
-		margin-left: 0;
-		text-align: center;
-	}
-	
 	.panel h3{
-		font-size: 15px;
+		font-size: 18px !important;
 		text-align: center;
 	}
 }
@@ -113,6 +89,10 @@ footer a {
 @media only screen and (max-width: 992px) {	
 	header {
 		text-align: center;
+	}
+	
+	header h1 {
+		font-size: 40px;
 	}
 	
 	.nav {
@@ -134,10 +114,6 @@ footer a {
 	
 	.pageContent {
 		text-align: center;
-	}
-	
-	header h1 {
-		font-size: 40px;
 	}
 	
 	.panel-left .panel-body{
