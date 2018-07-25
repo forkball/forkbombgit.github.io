@@ -20,6 +20,8 @@ a:hover, a:focus{
 
 header{
 	margin-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 header h1 {
@@ -70,6 +72,11 @@ footer a {
 		font-size: 20px !important;
 		text-align: center; 
         padding-left: 24px !important;
+	}
+	
+	header{
+		margin-top: 0px;
+		padding: 10px;
 	}
 	
 	.nav a {
