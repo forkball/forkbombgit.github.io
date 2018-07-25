@@ -34,24 +34,26 @@ header h1 {
 	padding-left: 25px;
 }
 
+.row-reverse {
+	display: flex; 
+	flex-direction: row-reverse;
+}
+
 .nav a {
     font-size: 20px;	
     color: gray;
     text-align: right;
 }
 
-.nav-projects h2{
-	padding-left: 0px;
-}
-
-.nav-projects a{
+.nav-projects li{
 	padding-top: 25px;
-	margin-left: 5px;
-	padding-right: 0px;
-	width: 155px;
-	font-size: 18px;
+	font-size: 16px;
+	float: right;
 }
 
+.panel-left {
+	margin-top: 20px;
+}
 .panel-left .panel-body{
 	margin-right: 50%;
 	margin-bottom: 2%;
@@ -83,7 +85,6 @@ footer a {
 	
 	.nav a {
 		font-size: 15px;	
-		text-align: center;
 	}
 	
 	.pageContent {
@@ -109,7 +110,7 @@ footer a {
 	}
 }
 
-@media only screen and (max-width: 768px) {	
+@media only screen and (max-width: 992px) {	
 	header {
 		text-align: center;
 	}
@@ -120,6 +121,15 @@ footer a {
 	
 	.nav a{
 		text-align: center;
+	}
+	
+	.nav-projects li{
+		padding-top: 0px;
+		float: left;
+	}
+	
+	.nav h2{
+		padding-bottom: 0px;
 	}
 	
 	.pageContent {
@@ -142,3 +152,4 @@ footer a {
 		margin-left: 0;
 		text-align: center;
 	}
+}
