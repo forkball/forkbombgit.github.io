@@ -4,9 +4,8 @@
 		<title> Eros Di Pede </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> 
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
@@ -38,15 +37,16 @@
 					<div class="nav-projects col-sm-12">
 						<h2 class="col-md-6 col-lg-8">Projects</h2>
 						<ul class="nav nav-tabs">
-						  <li class="active"><a href="#">Games</a></li>
-						  <li><a href="#">General</a></li>
+						  <li class="active"><a href="#" id="nav-games">Games</a></li>
+						  <li><a href="#" id="nav-general">General</a></li>
 						</ul>
 					</div>
 					
-					<div class="container col-sm-12">
+					<!-- Games -->
+					<div id="games" class="container col-sm-12">
 						<!-- Project 1 -->
 						<div class="panel panel-default panel-left col-sm-12">
-							<h3>Game Hive</h3>
+							<h3>UFO Mayhem</h3>
 							<div class="panel-body text-justify" style="text-justify: inter-character">
 									Lorem ipsum dolor sit amet, eam cu zril mediocrem, et prima libris efficiendi nam, has iriure aliquando ne. In cibo brute adolescens sed, ne est sint aperiam imperdiet. Ea duo justo erroribus repudiare, mea viris noster dissentiet no, et clita vitae mea. Ad noster interpretaris pro, mazim mucius vel ex.
 									Lorem ipsum dolor sit amet, eam cu zril mediocrem, et prima libris efficiendi nam, has iriure aliquando ne. In cibo brute adolescens sed, ne est sint aperiam imperdiet. Ea duo justo erroribus repudiare, mea viris noster dissentiet no, et clita vitae mea. Ad noster interpretaris pro, mazim mucius vel ex.
@@ -67,9 +67,38 @@
 							</div>
 						</div>
 					</div>
+					
+					<!-- General Projects -->
+					<div id="general" class="container col-sm-12 hidden">
+						<!-- Project 1 -->
+						<div class="panel panel-default panel-right col-sm-12">
+							<h3>Game Hive</h3>
+							<div class="panel-body text-justify" style="text-justify: inter-character">
+									Lorem ipsum dolor sit amet, eam cu zril mediocrem, et prima libris efficiendi nam, has iriure aliquando ne. In cibo brute adolescens sed, ne est sint aperiam imperdiet. Ea duo justo erroribus repudiare, mea viris noster dissentiet no, et clita vitae mea. Ad noster interpretaris pro, mazim mucius vel ex.
+									Lorem ipsum dolor sit amet, eam cu zril mediocrem, et prima libris efficiendi nam, has iriure aliquando ne. In cibo brute adolescens sed, ne est sint aperiam imperdiet. Ea duo justo erroribus repudiare, mea viris noster dissentiet no, et clita vitae mea. Ad noster interpretaris pro, mazim mucius vel ex.
+									Lorem ipsum dolor sit amet, eam cu zril mediocrem, et prima libris efficiendi nam, has iriure aliquando ne. In cibo brute adolescens sed, ne est sint aperiam imperdiet. Ea duo justo erroribus repudiare, mea viris noster dissentiet no, et clita vitae mea. Ad noster interpretaris pro, mazim mucius vel ex.
+									Ne has urbanitas assentior, est dicunt tacimates consequuntur cu. Nullam oblique interesset at nec, et dolores legendos cum. An sit mazim oblique consetetur. Laoreet verterem ut eos. Vel autem oblique inciderint in, habeo decore cu has. Eam ea tota minim aliquando.
+									Ne has urbanita
+							</div>
+						</div>
+						<!-- Project 2 -->
+						<div class="panel panel-default panel-left col-sm-12">
+							<h3>Console Web Crawler</h3>
+							<div class="panel-body text-justify " style="text-justify: inter-character">
+									Lorem ipsum dolor sit amet, eam cu zril mediocrem, et prima libris efficiendi nam, has iriure aliquando ne. In cibo brute adolescens sed, ne est sint aperiam imperdiet. Ea duo justo erroribus repudiare, mea viris noster dissentiet no, et clita vitae mea. Ad noster interpretaris pro, mazim mucius vel ex.
+									Lorem ipsum dolor sit amet, eam cu zril mediocrem, et prima libris efficiendi nam, has iriure aliquando ne. In cibo brute adolescens sed, ne est sint aperiam imperdiet. Ea duo justo erroribus repudiare, mea viris noster dissentiet no, et clita vitae mea. Ad noster interpretaris pro, mazim mucius vel ex.
+									Lorem ipsum dolor sit amet, eam cu zril mediocrem, et prima libris efficiendi nam, has iriure aliquando ne. In cibo brute adolescens sed, ne est sint aperiam imperdiet. Ea duo justo erroribus repudiare, mea viris noster dissentiet no, et clita vitae mea. Ad noster interpretaris pro, mazim mucius vel ex.
+									Ne has urbanitas assentior, est dicunt tacimates consequuntur cu. Nullam oblique interesset at nec, et dolores legendos cum. An sit mazim oblique consetetur. Laoreet verterem ut eos. Vel autem oblique inciderint in, habeo decore cu has. Eam ea tota minim aliquando.
+									Ne has urbanita
+							</div>
+						</div>
+					</div>
 				<footer class="col-xs-12">
 					<a href="mailto:erosdipede@gmail.com"> erosdipede@gmail.com </a>
 				</footer>	
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+				<script src="main.js"></script>
 			</div> 
 		</div>
 	</body>
