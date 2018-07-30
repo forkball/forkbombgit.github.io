@@ -51,11 +51,14 @@ header h1 {
 }
 
 #general .panel {
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0);
 }
 
 #games .panel {
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0);
+}
+.panel-body{
+	padding-top: 0px;
 }
 
 .panel-left .panel-body{
@@ -63,13 +66,22 @@ header h1 {
 	margin-bottom: 2%;
 }
 
+.panel-left h4{
+	padding-left: 2px;
+}
+
 .panel-right .panel-body{
 	margin-left: 50%;
 }
 
-.panel-right h3{
+.panel-right h4{
+	padding-right: 2px;
+}
+
+.panel-right h3, .panel-right h4{
 	text-align: right;
 }
+
 
 footer {
 	text-align: center;
@@ -79,6 +91,7 @@ footer {
 footer a {
 	margin-top: 10px;
 }
+
 
 @media only screen and (max-width: 576px) {
 	h1 {
@@ -138,6 +151,10 @@ footer a {
 	}
 	
 	.panel h3{
+		text-align: center;
+	}
+	
+	.panel h4{
 		text-align: center;
 	}
 	
