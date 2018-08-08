@@ -22,6 +22,7 @@ a:hover, a:focus {
   min-width: 320px;
 }
 
+<<<<<<< HEAD
 header {
   margin-top: 20px;
   padding-bottom: 10px;
@@ -32,6 +33,22 @@ header h1 {
   font-size: 50px;
   letter-spacing: 10px;
   font-weight: 700;
+=======
+header .container{
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+header h1 {
+	padding-top: 5px;
+    font-size: 50px;
+	letter-spacing: 10px;
+    font-weight: 700;
+>>>>>>> 6579251f93b7516cbdadf0415cc32400d70a54b6
+}
+
+.nav {
+	padding-top: 10px;
 }
 
 .nav a {
