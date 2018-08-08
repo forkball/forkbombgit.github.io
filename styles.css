@@ -22,16 +22,20 @@ a:hover, a:focus{
 	min-width: 320px;
 }
 
-header{
-	margin-top: 20px;
+header .container{
 	padding-bottom: 10px;
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 header h1 {
+	padding-top: 5px;
     font-size: 50px;
 	letter-spacing: 10px;
     font-weight: 700;
+}
+
+.nav {
+	padding-top: 10px;
 }
 
 .nav a {
