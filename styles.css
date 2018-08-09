@@ -44,7 +44,7 @@ header .container {
   padding-bottom: 10px;
 }
 
-header .nav{
+header .nav {
   margin-top: 5px;
 }
 
@@ -65,14 +65,10 @@ header .nav{
   color: white;
 }
 
-.nav-projects li .active {
+.nav-projects li a, .nav-tabs li a:hover, .nav-tabs li a {
   background-color: #312C2D;
   color: white;
-}
-
-.nav-projects a:hover, .nav-projects a:focus {
-  background-color: #312C2D;
-  color: white;
+  border: 0;
 }
 
 #general, #games {
