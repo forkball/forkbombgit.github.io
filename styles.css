@@ -57,8 +57,11 @@ header .nav {
   align: left;
 }
 
+#about {
+  margin-top: 30px;
+}
+
 .nav-projects li {
-  float: right;
   padding-top: 25px;
   font-size: 16px;
   background-color: #312C2D;
@@ -69,6 +72,11 @@ header .nav {
   background-color: #312C2D;
   color: white;
   border: 0;
+  z-index: 1;
+}
+
+.nav-projects li.active a{
+  color: #222;
 }
 
 #general, #games {
