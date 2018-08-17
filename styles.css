@@ -9,9 +9,6 @@ a {
 
 a:hover, a:focus {
   cursor: pointer;
-  text-decoration: none;
-  color: #fdfdfd;
-  font-weight: 600;
 }
 
 p {
@@ -53,6 +50,12 @@ header .nav {
   font-size: 20px;
 }
 
+header .nav a:hover, header .nav a:focus {
+  text-decoration: none;
+  color: #fdfdfd;
+  font-weight: 600;
+}
+
 .nav i {
   align: left;
 }
@@ -63,20 +66,24 @@ header .nav {
 
 .nav-projects li {
   padding-top: 25px;
-  font-size: 16px;
-  background-color: #312C2D;
   color: white;
+  background-color: #312C2D;
+  font-size: 16px;
 }
 
 .nav-projects li a, .nav-tabs li a:hover, .nav-tabs li a {
-  background-color: #312C2D;
+  z-index: 1;
   color: white;
   border: 0;
-  z-index: 1;
+  background-color: #312C2D;
 }
 
-.nav-projects li.active a{
+.nav-projects li.active a {
   color: #222;
+}
+
+.nav-tabs li a:hover {
+  text-decoration: underline;
 }
 
 #general, #games {
@@ -84,42 +91,19 @@ header .nav {
 }
 
 #general .panel {
-  background-color: #F9FAF9;
   color: #222;
+  background-color: #F9FAF9;
 }
 
 #games .panel {
-  background-color: #F9FAF9;
   color: #222;
+  background-color: #F9FAF9;
 }
 
 .panel-body {
   padding-top: 0px;
+  color: #222;
   font-size: 16px;
-  color: #222;
-}
-
-.panel-left .panel-body {
-  margin-right: 50%;
-  margin-bottom: 2%;
-}
-
-.panel-left h4 {
-  padding-left: 2px;
-  color: #222;
-}
-
-.panel-right .panel-body {
-  margin-left: 50%;
-}
-
-.panel-right h4 {
-  padding-right: 2px;
-  text-align: right;
-}
-
-.panel-right h3 {
-  text-align: right;
 }
 
 footer {
@@ -137,9 +121,9 @@ footer a {
     text-align: center;
   }
   header h1 {
-    font-size: 45px;
-    padding-top: 10px;
     margin-bottom: 0px;
+    padding-top: 10px;
+    font-size: 45px;
   }
   h2 {
     font-size: 30px;
