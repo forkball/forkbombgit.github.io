@@ -50,7 +50,7 @@ header .nav {
   font-size: 20px;
 }
 
-header .nav a:hover, header .nav a:focus {
+header .nav a:hover, header .nav a:focus, footer a:focus, footer a:hover {
   text-decoration: none;
   color: #fdfdfd;
   font-weight: 600;
