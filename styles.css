@@ -138,17 +138,10 @@ footer a {
   .pageContent {
     text-align: center;
   }
-  .panel-left .panel-body {
-    margin-right: 0;
-  }
   .panel h3 {
     text-align: center;
   }
   .panel h4 {
-    text-align: center;
-  }
-  .panel-right .panel-body {
-    margin-left: 0;
     text-align: center;
   }
 }
@@ -159,9 +152,16 @@ footer a {
     padding: 10px;
     text-align: center;
   }
+  #about{
+     margin-top:160px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
+  #about{
+     margin-top:130px;
+  }
+
   header h1 {
     padding-left: 25px !important;
     text-align: center;
