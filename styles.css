@@ -4,11 +4,14 @@
 
 a {
   text-decoration: none;
-  color: #fdfdfd;
+  color: #222;
+  font-weight: bold;
 }
 
 a:hover, a:focus {
+  text-decoration: underline;
   cursor: pointer;
+  color: #222;
 }
 
 p {
@@ -21,18 +24,17 @@ h3 {
 
 body {
   min-width: 384px;
-  background-color: #312C2D;
 }
 
-header {
+header .container {
   padding: 15px;
-  background-color: #CC3F44;
+  border-bottom: 3px solid #222;
 }
 
 header h1 {
   text-align: left;
   letter-spacing: 10px;
-  color: #fdfdfd;
+  color: #222;
   font-size: 55px;
   font-weight: 900;
 }
@@ -50,12 +52,6 @@ header .nav {
   font-size: 20px;
 }
 
-header .nav a:hover, header .nav a:focus, footer a:focus, footer a:hover {
-  text-decoration: none;
-  color: #fdfdfd;
-  font-weight: 600;
-}
-
 .nav i {
   align: left;
 }
@@ -68,23 +64,16 @@ header .nav a:hover, header .nav a:focus, footer a:focus, footer a:hover {
 .nav-projects li {
   padding-top: 25px;
   color: white;
-  background-color: #312C2D;
   font-size: 16px;
 }
 
 .nav-projects li a, .nav-tabs li a:hover, .nav-tabs li a {
   z-index: 1;
-  color: white;
   border: 0;
-  background-color: #312C2D;
 }
 
-.nav-projects li.active a {
+.nav-projects li.active a,.nav-projects li.active a:focus{
   color: #222;
-}
-
-.nav-tabs li a:hover {
-  text-decoration: underline;
 }
 
 #general, #games {
@@ -93,12 +82,14 @@ header .nav a:hover, header .nav a:focus, footer a:focus, footer a:hover {
 
 #general .panel {
   color: #222;
-  background-color: #F9FAF9;
 }
 
 #games .panel {
   color: #222;
-  background-color: #F9FAF9;
+}
+
+.panel-footer {
+  background-color: white;
 }
 
 .panel-body {
@@ -145,8 +136,8 @@ footer a {
   .panel h4 {
     text-align: center;
   }
-  #about{
-    margin-bottom:20px;
+  #about {
+    margin-bottom: 20px;
   }
 }
 
@@ -156,17 +147,16 @@ footer a {
     padding: 10px;
     text-align: center;
   }
-  #about{
-     margin-top:160px;
-     margin-bottom: 20px;
+  #about {
+    margin-top: 160px;
+    margin-bottom: 20px;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  #about{
-     margin-top:130px;
+  #about {
+    margin-top: 130px;
   }
-
   header h1 {
     padding-left: 25px !important;
     text-align: center;
