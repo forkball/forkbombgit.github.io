@@ -1,3 +1,4 @@
+//taken from http://tobiasahlin.com/moving-letters/#6
 // Wrap every letter in a span
 $('.ml6 .letters').each(function(){
   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
