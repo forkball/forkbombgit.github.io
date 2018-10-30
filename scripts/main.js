@@ -1,8 +1,12 @@
 //handler for general nav
 $("#nav-general").on("click", function(e) {
   e.preventDefault();
-  $(this).parent().addClass("active")
-  $("#nav-games").parent().removeClass("active");
+  $(this)
+    .parent()
+    .addClass("active");
+  $("#nav-games")
+    .parent()
+    .removeClass("active");
   $("#games").fadeOut(200, function() {
     $("#general").removeClass("hidden");
     $("#general").fadeIn(200);
@@ -13,8 +17,12 @@ $("#nav-general").on("click", function(e) {
 //handler for game nav
 $("#nav-games").on("click", function(e) {
   e.preventDefault();
-  $(this).parent().addClass("active")
-  $("#nav-general").parent().removeClass("active");
+  $(this)
+    .parent()
+    .addClass("active");
+  $("#nav-general")
+    .parent()
+    .removeClass("active");
   $("#general").fadeOut(200, function() {
     $("#games").removeClass("hidden");
     $("#games").fadeIn(200);
