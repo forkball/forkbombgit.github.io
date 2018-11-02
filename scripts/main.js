@@ -1,3 +1,30 @@
+$('.ml6 .letters').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+var bobble = function(){
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    duration: 750,
+    delay: function(el, i) {
+      return i;
+    }
+  }).add({
+    targets: '.ml6',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+}
+
+bobble();
+$("header").on("click", function(e){
+  bobble()
+});
+
 //handler for general nav
 $("#nav-general").on("click", function(e) {
   e.preventDefault();
