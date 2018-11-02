@@ -21,7 +21,7 @@ anime.timeline({loop: false})
 }
 
 bobble();
-$("header").on("click", function(e){
+$("h1 > span").on("click", function(e){
   bobble()
 });
 
