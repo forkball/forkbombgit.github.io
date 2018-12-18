@@ -120,7 +120,7 @@ header .nav {
 
 #general .panel,
 #games .panel {
-  border-bottom: 2px solid #f0eeec;
+  border-left: 7px solid #f0eeec;
 }
 
 .panel-footer {
