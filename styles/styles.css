@@ -32,7 +32,7 @@ header {
   padding: 15px;
   margin-top: 20px;
   padding-bottom: 10px;
-  background-color: #bc0315ec;
+  background-color: #bc0315;
   border-radius: 5px;
   float: left;
 }
@@ -76,8 +76,8 @@ header .nav {
 }
 
 .panel {
-  border-color: #bc0315ec;
-  background-color: #bc0315ec;
+  border-color: #bc0315;
+  background-color: #bc0315;
 }
 
 .nav-projects li {
@@ -91,25 +91,25 @@ header .nav {
 .nav-tabs li a {
   z-index: 1;
   border: 0;
-  background-color: #bc0315ec;
+  background-color: #bc0315;
 }
 
 .nav-projects li.active a,
 .nav-projects li.active a:focus,
 .nav-projects li.active a:hover {
   text-decoration: none;
-  background-color: #bc0315ec;
-  border-top-color: #bc0315ec;
-  border-left-color: #bc0315ec;
-  border-right-color: #bc0315ec;
+  background-color: #bc0315;
+  border-top-color: #bc0315;
+  border-left-color: #bc0315;
+  border-right-color: #bc0315;
 }
 
 .nav-projects li a:hover,
 .nav-projects li a:focus {
   text-decoration: underline;
-  border-top-color: #bc0315ec;
-  border-left-color: #bc0315ec;
-  border-right-color: #bc0315ec;
+  border-top-color: #bc0315;
+  border-left-color: #bc0315;
+  border-right-color: #bc0315;
 }
 
 #general,
@@ -124,8 +124,8 @@ header .nav {
 }
 
 .panel-footer {
-  background-color: #bc0315ec;
-  border-color: #bc0315ec;
+  background-color: #bc0315;
+  border-color: #bc0315;
 }
 
 .panel-body {
