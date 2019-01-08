@@ -19,7 +19,7 @@ h3 {
   font-weight: bold;
 }
 body {
-  min-width: 380px;
+  min-width: 400px;
 }
 header {
   padding: 15px;
@@ -65,6 +65,9 @@ footer a {
   margin-bottom: 0px;
   border-color: #bc0315;
 }
+#about h2 {
+  margin-left: 15px;
+}
 #projects { 
   border-color: #bc0315;
 }
@@ -76,6 +79,10 @@ footer a {
 #general .panel,
 #games .panel {
   border-left: 7px solid #f0eeec;
+}
+.row {
+  margin-left: 75px;
+  margin-right: 75px;
 }
 .nav a {
   text-align: right;
@@ -146,6 +153,10 @@ footer a {
   }
   #about {
     margin-bottom: 20px;
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
   }
   .nav-projects li {
     float: left;
