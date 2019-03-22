@@ -14,6 +14,7 @@ a:focus {
 }
 p {
   font-size: 16px;
+  margin-top: 25px;
 }
 h3 {
   font-weight: bold;
@@ -24,35 +25,17 @@ body {
 header {
   padding: 15px;
   margin-top: 20px;
-  padding-bottom: 10px;
   background-color: #bc0315;
   border-radius: 5px;
-  float: left;
-}
-h1 > span:hover {
-  cursor: pointer;
+  text-align: center;
 }
 header h1 {
   text-align: left;
   letter-spacing: 10px;
-}
-img {
-  float: right;
-  width: 25%;
-  height: 25%;
-  padding: 20px;
-  margin-top: 30px;
-  margin-right: 30px;
-  border-radius: 100%;
-  -moz-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-}
-header .nav {
-  margin-top: 10px;
+  font-size: 40px !important;
 }
 footer {
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   font-size: 16px;
@@ -60,13 +43,10 @@ footer {
 footer a {
   margin-top: 10px;
 }
-#about {
+#body-content {
   margin-top: 30px;
   margin-bottom: 0px;
   border-color: #bc0315;
-}
-#about h2 {
-  margin-left: 15px;
 }
 #projects { 
   border-color: #bc0315;
@@ -80,6 +60,9 @@ footer a {
 #games .panel {
   border-left: 7px solid #f0eeec;
 }
+.active {
+  text-decoration: underline;
+}
 .row {
   margin-left: 75px;
   margin-right: 75px;
@@ -89,40 +72,16 @@ footer a {
   font-weight: bold;
   font-size: 20px;
 }
+.content-nav {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 20px;
+}
 .panel {
   background-color: #bc0315;
 }
-.nav-projects li {
-  padding-top: 25px;
-  font-size: 16px;
-  font-weight: bold;
-}
-.nav-projects li a,
-.nav-tabs li a:hover,
-.nav-tabs li a {
-  z-index: 1;
-  border: 0;
-  background-color: #bc0315;
-}
-.nav-tabs > li {
-  margin-bottom: 0px;
-}
-.nav-projects li.active a,
-.nav-projects li.active a:focus,
-.nav-projects li.active a:hover {
-  text-decoration: none;
-  background-color: #bc0315;
-  border-top-color: #bc0315;
-  border-left-color: #bc0315;
-  border-right-color: #bc0315;
-}
-.nav-projects li a:hover,
-.nav-projects li a:focus {
-  text-decoration: underline;
-  border-top-color: #bc0315;
-  border-left-color: #bc0315;
-  border-right-color: #bc0315;
-}
+
 .panel-footer {
   background-color: #bc0315;
 }
@@ -140,33 +99,20 @@ footer a {
     margin-bottom: 0px;
     padding-bottom: 0px;
     padding-top: 10px;
-    font-size: 35px;
-  }
-  img {
-    display: none;
+    font-size:32px;
   }
   header .nav {
     margin-top: 20px;
   }
-  h2 {
-    font-size: 30px;
-  }
-  #about {
+  #body-content {
     margin-bottom: 20px;
   }
   .row {
     margin-left: 0;
     margin-right: 0;
   }
-  .nav-projects li {
-    float: left;
-    padding-top: 0px;
-  }
   .nav a {
     z-index: 1;
-  }
-  .pageContent {
-    text-align: center;
   }
   .panel h3 {
     text-align: center;
@@ -192,7 +138,7 @@ footer a {
     margin-top: 0px;
     float: none !important;
   }
-  #about {
+  #body-content {
     margin-bottom: 20px;
   }
 }
@@ -200,14 +146,11 @@ footer a {
 @media only screen and (max-width: 576px) {
   header h1 {
     text-align: center;
-    font-size: 25px !important;
+    font-size: 32px !important;
   }
   .nav a {
     z-index: 1;
     font-size: 15px;
-  }
-  .pageContent h2 {
-    font-size: 20px;
   }
   .panel h3 {
     text-align: center;
