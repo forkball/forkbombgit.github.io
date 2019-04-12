@@ -4,7 +4,7 @@
 }
 body {
   background-color: #680606;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 a {
   text-decoration: none;
