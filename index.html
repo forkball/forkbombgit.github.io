@@ -1,254 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<title> Eros Di Pede </title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<meta name="description"
-		content="The personal website of Eros Di Pede - an aspiring game developer studying computer science and game design at Carleton University.">
-	<meta name="keywords"
-		content="eros,dipede,game,design,game design,carleton university,computer, science, computer science, fork">
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-	<link rel="stylesheet" href="./styles/styles.css">
-	<link rel="stylesheet" href="./styles/textanimations.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eros Di Pede's Personal Website</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/bulma.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
-	<div class="container page">
-		<div class="row">
-			<div class="pageContent col-sm-12">
-				<header class="col-xs-12">
-					<h1 class="pageTitle col-xs-12 col-sm-8">EROS DI PEDE</h1>
-					<div class="nav col-xs-12 col-sm-4">
-						<a class="col-sm-12" target="_blank" href="./assets/resume.pdf"> Resume </a>
-						<a class="col-sm-12" target="_blank" href="https://github.com/ForkBombGIT">Github</a>
-						<a class="col-sm-12" target="_blank" href="https://www.linkedin.com/in/erosdipede/">Linkedin</a>
-					</div>
-				</header>
-				<div id="body-content" class="panel panel-default col-xs-12">
-					<div class="content-nav col-xs-12 col-sm-2">
-						<a id="nav-about" class="col-sm-12 active"> About </a>
-						<a id="nav-projects" class="col-sm-12"> Projects </a>
-						<a id="nav-games" class="col-sm-12"> Games </a>
-					</div>
-					<div id="about" class="col-xs-12 col-sm-10">
-						<p class="panel-body text-justify">
-							My name is Eros Di Pede, and I'm a third-year Computer Science student studying at Carleton
-							University in
-							Ottawa, Ontario. I am working towards a Bachelor in Computer Science, with a specialization
-							in
-							Game Development. I'm an aspiring indie game developer and hope to release a
-							game
-							with a pal of mine very soon. Other than game
-							development, I also have a strong interest in mobile and web development. In my free time, I
-							work on various
-							ongoing programming projects, watch TV shows, practice karate, and take pictures. I'm
-							currently
-							working on a few projects including, an Android
-							app called Scrambled Eggs, and a computer game called Highlighters.
-						</p>
-					</div>
-					<div id="games" class="hidden col-xs-12 col-sm-10">
-						<div class="panel panel-default col-sm-12">
-							<h3>Highlighters</h3>
-							<h4> 2019 </h4>
-							<div class="panel-body text-justify " style="text-justify: inter-character">
-								<p>
-									Highlighters is a simple tile swapping puzzle game that was developed in about a
-									month.
-									The game revolves around the matching of "Charms" with color coresponding "Bombs".
-									A match occurs when a Bomb matches with two other game pieces.
-									The objective of the game is to create matches as quickly as possible, while
-									preventing the screen from filling up
-									with game pieces.
-								</p>
-							</div>
-							<div class="panel-footer">
-								<a href="https://github.com/ForkBombGIT/Highlighters" target="_blank"
-									style="color:#222;">View Highlighters on Github</a>
-							</div>
-						</div>
-						<div class="panel panel-default col-sm-12">
-							<h3>UFO Mayhem</h3>
-							<h4> 2016 </h4>
-							<div class="panel-body text-justify" style="text-justify: inter-character">
-								<p>
-									UFO Mayhem puts the player in the seat of an alien spaceship to cause havoc to a
-									small, densely populated
-									city. The main objective of the game is to abduct as many people as possible, as the
-									human's military tries
-									to put a stop to your mayhem. Abductions
-									grant experience to the ship providing random upgrades varying from increased
-									defense to extended ray length.
-									As the player continues to abduct humans, the military will gradually increase their
-									forces, beginning at
-									policemen and finishing with
-									helicopters.
-									<br><br> UFO Mayhem is a 2D side-scroller developed by myself and a team of three
-									other people. The game was
-									developed in approximately 24 hours over the span of two weeks. The game was made
-									for the Skills Canada
-									competition held in Mississauga,
-									Ontario. We managed to place 1st, bringing us our second gold as a game development
-									team.
-								</p>
-							</div>
-							<div class="panel-footer">
-								<a href="./assets/UFO_Mayhem.exe" download style="color:#222;">Download UFO Mayhem (9.18
-									mb)</a>
-							</div>
-						</div>
-						<div class="panel panel-default col-sm-12">
-							<h3>Chaos</h3>
-							<h4> 2016 </h4>
-							<div class="panel-body text-justify " style="text-justify: inter-character">
-								<p>
-									Chaos lets players take control of a dual wielding skeleton inside of a treacherous
-									dungeon. Players can pick
-									up new spells and equipment to enhance their character to fight off various enemies
-									ranging from clowns and
-									dolls to disappearing ghosts and
-									giant insects. The dungeon is randomly generated, so each player will be different
-									from the previous!<br><br>
-									Chaos is a 2D top-down dungeon crawler developed by myself and a team of three other
-									people. The game was
-									developed for a
-									game making competition held at Sheridan College with over 120 participants. Our
-									team managed to bring home
-									gold for this game, which was a great pay off for the countless hours put into this
-									game.
-								</p>
-							</div>
-							<div class="panel-footer">
-								<a href="./assets/Chaos.exe" download style="color:#222;">Download Chaos (6.72 mb)</a>
-							</div>
-						</div>
+    <section class="hero is-medium is-dark is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    Eros Di Pede
+                </h1>
+                <h2 class="subtitle">
+                    Pursuing a Bachelors of Computer Science at Carleton University
+                </h2>
+                <div id="contact-icons">
+                    <span class="icon is-large">
+                        <i class="fas fa-2x fab fa-github-square"></i>
+                    </span>
+                    <span class="icon is-large">
+                        <i class="fas fa-2x fa-file"></i>
+                    </span>
+                    <span class="icon is-large">
+                        <i class="fas fa-2x fab fa-linkedin"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
 
-						<div style="margin-bottom: 20px;" class="panel panel-default col-sm-12">
-							<h3>Endless</h3>
-							<h4> 2015 </h4>
-							<div class="panel-body text-justify " style="text-justify: inter-character">
-								<p>
-									Bound in a mysterious castle, players get their selection of three different classes
-									in an attempt to see how
-									long they can survive. The castle is filled with endless swarms of monsters, along
-									with nail-biting boss
-									fights, unique equipment upgrades, and
-									stat modifiers to keep players engaged and coming back for more.<br><br> Endless is
-									a 2D top-down dungeon
-									crawler developed by myself and a team of three other people. The game was developed
-									for the second annual
-									Sheridan College game
-									making competition, and we managed to place 2nd on our first competition ever!
-								</p>
-							</div>
-							<div class="panel-footer">
-								<a href="./assets/Endless.exe" download style="color:#222;">Download Endless (20.9
-									mb)</a>
-							</div>
-						</div>
-					</div>
-
-					<div id="general" class="hidden col-xs-12 col-sm-10">
-						<!-- Project 1 -->
-						<div class="panel panel-default col-sm-12">
-							<h3>Scrambled Eggs</h3>
-							<h4> 2018 </h4>
-							<div class="panel-body text-justify" style="text-justify: inter-character">
-								Scrambled Eggs is an Android application developed by myself and a friend. Essentially,
-								users can use
-								Scrambled Eggs to discover games they've never heard of using a few services provided by
-								the app. To begin,
-								the app recommends a new game to play every
-								day. Although if users do not like the game of the day, or have played it previously,
-								they can also generate
-								random games or work through a questionnaire that will generate a game for them based on
-								their answers.
-							</div>
-							<div class="panel-footer">
-								<a href="https://github.com/ForkBombGIT/Scrambled-Eggs" target="_blank"
-									style="color:#222;">View Scrambled
-									Eggs on Github</a>
-							</div>
-						</div>
-						<!-- Project 2 -->
-						<div class="panel panel-default col-sm-12">
-							<h3>Encrypt Everything</h3>
-							<h4> 2018 </h4>
-							<div class="panel-body text-justify" style="text-justify: inter-character">
-								Encrypt Everything is a simple web application utilizing the skeleton.css boilerplate.
-								The app allows users to
-								encrypt and decrypt strings utilizing various ciphers. I created this application to
-								learn the different
-								implementations of encryption ciphers
-								and to test out skeleton.css.
-							</div>
-							<div class="panel-footer">
-								<a href="https://github.com/ForkBombGIT/Encrypt-Everything" target="_blank"
-									style="color:#222;">View Encrypt
-									Everything on Github</a><br>
-								<a href="https://forkbombgit.github.io/Encrypt-Everything" target="_blank"
-									style="color:#222;">Test out
-									Encrypt Everything live! </a>
-							</div>
-						</div>
-						<!-- Project 3 -->
-						<div class="panel panel-default col-sm-12">
-							<h3>Console Web Crawler</h3>
-							<h4> 2018 </h4>
-							<div class="panel-body text-justify " style="text-justify: inter-character">
-								This is a simple Python web crawler I created which allows users to input URLs and
-								scrape web pages to check
-								for broken links, and search for particular elements. The program runs inside of a
-								terminal, and the user can
-								input commands to communicate with
-								the application utilizing the prompt.
-							</div>
-							<div class="panel-footer">
-								<a href="https://github.com/ForkBombGIT/Console-Web-Crawler" target="_blank"
-									style="color:#222;">View Console
-									Web Crawler on Github</a>
-							</div>
-						</div>
-						<!-- Project 4 -->
-						<div class="panel panel-default col-sm-12">
-							<h3>Cooking Central</h3>
-							<h4> 2017 </h4>
-							<div class="panel-body text-justify " style="text-justify: inter-character">
-								Cooking Central is a web application that was created in my second-year web development
-								course utilizing
-								various technologies including Node.js, HTML, CSS, Bootstrap, Javascript, and so on. The
-								application allows
-								users to enter a variety of spices and/or
-								ingredients, which in turn causes the application to query a Mongo database, and return
-								various recipes that
-								the user can make based on the inputted ingredients.
-							</div>
-							<div class="panel-footer">
-								<a href="https://github.com/ForkBombGIT/Cooking-Central" target="_blank"
-									style="color:#222;">View Cooking
-									Central on Github</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<footer class="col-xs-12">
-					<a href="mailto:erosdipede@gmail.com"> erosdipede@gmail.com </a>
-				</footer>
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-					integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-					crossorigin="anonymous"></script>
-				<script src="./scripts/main.js"></script>
-			</div>
-		</div>
+        <div class="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth">
+                <div class="container">
+                    <ul>
+                        <li class="is-active"><a>Projects</a></li>
+                        <li><a>Games</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
 </body>
 
 </html>
