@@ -1,3 +1,12 @@
-.subtitle {
-    margin-top: 0px !important;
+h1 {
+    font-size: 48px !important;
+}
+
+.icon a {
+    color: #363636;
+}
+
+.icon a :hover,
+.icon a :focus {
+    color: #5c5c5c;
 }
