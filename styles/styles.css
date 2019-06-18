@@ -2,6 +2,10 @@ h1 {
     font-size: 48px !important;
 }
 
+li>a[id^="nav"]:focus {
+    background-color: #303030;
+}
+
 .icon a {
     color: #363636;
 }
