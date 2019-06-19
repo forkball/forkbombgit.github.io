@@ -2,8 +2,10 @@ h1 {
     font-size: 48px !important;
 }
 
-li>a[id^="nav"]:focus {
+li>a[id^="nav"]:focus,
+li>a[id^="nav"]:hover {
     background-color: #303030;
+    text-decoration: underline;
 }
 
 .icon a {
