@@ -45,11 +45,13 @@ window.onload = function() {
 
 function handleNavigationClick(nav) {
     //nav management
-    activeNav = document.getElementsByClassName("is-active")[0]
-    activeNav.classList.remove("is-active");
-    document.getElementById(nav).parentElement.classList.add("is-active");
+    var activeNav = document.getElementsByClassName("is-active")[0]
+    if (nav !== activeNav.children[0].id) {
+        activeNav.classList.remove("is-active");
+        document.getElementById(nav).parentElement.classList.add("is-active");
 
-    //content management
-    document.getElementById(nav.replace("nav", "content")).removeAttribute("hidden");
-    document.getElementById((activeNav.children[0].id).replace("nav", "content")).setAttribute("hidden", "true");
+        //content management
+        document.getElementById(nav.replace("nav", "content")).removeAttribute("hidden");
+        document.getElementById((activeNav.children[0].id).replace("nav", "content")).setAttribute("hidden", "true");
+    }
 };

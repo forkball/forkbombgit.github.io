@@ -1,18 +1,35 @@
-h1 {
-    font-size: 48px !important;
-}
-
-li>a[id^="nav"]:focus,
-li>a[id^="nav"]:hover {
-    background-color: #303030;
-    text-decoration: underline;
-}
-
-.icon a {
-    color: #363636;
-}
-
-.icon a :hover,
-.icon a :focus {
-    color: #5c5c5c;
-}
+    h1 {
+        font-size: 48px !important;
+    }
+    
+    li>a[id^="nav"]:focus,
+    li>a[id^="nav"]:hover {
+        background-color: #303030;
+        text-decoration: underline;
+    }
+    
+    .icon a {
+        color: #363636;
+    }
+    
+    .icon a :hover,
+    .icon a :focus {
+        color: #5c5c5c;
+    }
+    
+    .project {
+        outline: #5c5c5c solid 2px;
+        margin: 10px 10px 0px 10px;
+        border-radius: 50px !important;
+    }
+    
+    .project-year {
+        margin-top: -10px;
+    }
+    
+    @media only screen and (min-width: 769px) {
+        #content-contact {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+    }
