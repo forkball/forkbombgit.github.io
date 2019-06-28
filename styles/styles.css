@@ -1,5 +1,9 @@
-    h1 {
-        font-size: 48px !important;
+    #header-title {
+        font-size: 48px;
+    }
+
+    #header-sub {
+        font-size: 24px;
     }
     
     li>a[id^="nav"]:focus,
@@ -28,6 +32,9 @@
     }
     
     @media only screen and (min-width: 769px) {
+        #header-sub {
+            margin-top: 0.65em;
+        }
         #content-contact {
             margin-left: 25%;
             margin-right: 25%;
