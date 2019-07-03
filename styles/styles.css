@@ -1,7 +1,7 @@
     #header-title {
         font-size: 48px;
     }
-
+    
     #header-sub {
         font-size: 24px;
     }
@@ -22,13 +22,13 @@
     }
     
     .project {
-        outline: #5c5c5c solid 2px;
-        margin: 10px 10px 0px 10px;
-        border-radius: 50px !important;
+        outline: #FAFAFA solid 2px;
+        margin-top: 10px;
     }
     
     .project-year {
         margin-top: -10px;
+        margin-bottom: 10px;
     }
     
     @media only screen and (min-width: 769px) {
