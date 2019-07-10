@@ -43,7 +43,7 @@ function handleNavigationClick(nav) {
         document.getElementById(nav).parentElement.classList.add("is-active");
 
         //content management
-        document.getElementById(nav.replace("nav", "content")).removeAttribute("hidden");
-        document.getElementById((activeNav.children[0].id).replace("nav", "content")).setAttribute("hidden", "true");
+        document.getElementById(nav.replace("nav", "page")).removeAttribute("hidden");
+        document.getElementById((activeNav.children[0].id).replace("nav", "page")).setAttribute("hidden", "true");
     }
 };
