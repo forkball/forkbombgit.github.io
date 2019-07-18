@@ -16,18 +16,25 @@
         margin-top: 2.0em;
     }
     
-    .icon a {
+    .icon a,
+    .card-header a {
         color: #363636;
     }
     
     .icon a :hover,
-    .icon a :focus {
+    .icon a :focus,
+    .card-header a :hover,
+    .card-header a :focus {
         color: #5c5c5c;
     }
     
     .project {
-        outline: #FAFAFA solid 2px;
         margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .project>.card-content>h3 {
+        font-weight: bold;
     }
     
     .project-year {
@@ -36,11 +43,11 @@
     }
     
     .project-icon {
-        float: right;
+        float: right !important;
     }
     
     @media only screen and (min-width: 769px) {
         #header-sub {
-            margin-top: 0.7em;
+            margin-top: 0.75em;
         }
     }

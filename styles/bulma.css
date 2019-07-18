@@ -6088,11 +6088,11 @@ print {
 .card-header {
     background-color: transparent;
     align-items: stretch;
-    box-shadow: 0 1px 2px rgba(10, 10, 10, 0.1);
     display: flex;
 }
 
 .card-header-title {
+    font-size: 24px;
     align-items: center;
     color: #363636;
     display: flex;
