@@ -1,3 +1,7 @@
+    html {
+        min-width: 375px;
+    }
+    
     #header-title {
         font-size: 48px;
     }
@@ -48,6 +52,6 @@
     
     @media only screen and (min-width: 769px) {
         #header-sub {
-            margin-top: 0.75em;
+            margin-top: 0.65em;
         }
     }
