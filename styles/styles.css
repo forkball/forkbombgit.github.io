@@ -20,18 +20,6 @@
         margin-top: 2.0em;
     }
     
-    .icon a,
-    .card-header a {
-        color: #363636;
-    }
-    
-    .icon a :hover,
-    .icon a :focus,
-    .card-header a :hover,
-    .card-header a :focus {
-        color: #5c5c5c;
-    }
-    
     .project {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -46,8 +34,20 @@
         margin-bottom: 10px;
     }
     
+    .icon a,
+    .project-icon a {
+        color: #363636;
+    }
+    
+    .icon a :hover,
+    .icon a :focus,
+    .project-icon a:focus,
+    .project-icon a:hover {
+        color: #5c5c5c;
+    }
+    
     .project-icon {
-        float: right !important;
+        text-align: center;
     }
     
     @media only screen and (min-width: 769px) {
