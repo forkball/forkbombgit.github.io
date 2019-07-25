@@ -16,8 +16,8 @@
         text-decoration: underline;
     }
     
-    .page-content {
-        margin-top: 2.0em;
+    .date {
+        float: right;
     }
     
     .project {
