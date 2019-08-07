@@ -6,7 +6,7 @@
         font-size: 48px;
     }
     
-    #dropdown-nav {
+    #dropdown-nav-div {
         display: none !important;
     }
     
@@ -68,7 +68,7 @@
         #nav {
             display: none !important;
         }
-        #dropdown-nav {
+        #dropdown-nav-div {
             display: inline-block !important;
         }
     }
