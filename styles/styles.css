@@ -23,7 +23,7 @@
         background-color: #303030;
         text-decoration: underline;
     }
-    
+
     .date {
         float: right;
     }
@@ -62,6 +62,11 @@
         #header-sub {
             margin-top: 0.65em;
         }
+        
+        .header {
+            margin-top: 20px;
+        }
+
     }
     
     @media only screen and (max-width: 768px) {
