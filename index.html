@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/bulma.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script defer src="js/main.js"></script>
+    <script defer src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -25,8 +25,8 @@
                 </div>
                 <div id="dropdown-nav-div" class="select is-medium is-rounded">
                     <select id="dropdown-nav" aria-label="Content Navigation" onchange="navSelectChange()">
-                        <option selected value="nav-about">About me</option>
-                        <option value="nav-work">Work Experience</option>
+                        <option selected value="nav-about">About</option>
+                        <option value="nav-work">Work</option>
                         <option value="nav-projects">Projects</option>
                         <option value="nav-games">Games</option>
                     </select>
@@ -94,8 +94,21 @@
         <div id="page-work" hidden class="container ">
             <div class="tile is-parent">
                 <article class="tile is-child box">
-                    <h2 class="title">Teaching Assistant</h2>
-                    <h3 class="subtitle">Carleton University</h3>
+                    <h2 class="title page-work-position">Software Developer</h2>
+                    <h3 class="subtitle page-work-company">IFS</h3>
+                    <h4 class="subtitle page-work-time">Jan 2020 - Present</h4>
+                    <div class="content">
+                        <ul>
+                            <li>Implemented an end to end testing project in an aircraft maintenance enterprise application that allows developers to thoroughly test their changes to the system </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h2 class="title page-work-position">Teaching Assistant</h2>
+                    <h3 class="subtitle page-work-company">Carleton University</h3>
+                    <h4 class="subtitle page-work-time">Sep 2019 - Dec 2019</h4>
                     <div class="content">
                         <ul>
                             <li>Assisted students with problems and questions they may have to ensure that students have a proper understanding of course material</li>
@@ -106,8 +119,9 @@
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
-                    <h2 class="title">Student Web Developer</h2>
-                    <h3 class="subtitle">Statistics Canada</h3>
+                    <h2 class="title page-work-position">Web Developer</h2>
+                    <h3 class="subtitle page-work-company">Statistics Canada</h3>
+                    <h4 class="subtitle page-work-time">Sep 2018 - Dec 2018</h4>
                     <div class="content">
                         <ul>
                             <li>Developed a variety of React.js components for a project known as the 'Innovation Radar', a single page web application with the goal of promoting innovation throughout Statistics Canada</li>
@@ -119,8 +133,9 @@
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
-                    <h2 class="title">Student Web Developer</h2>
-                    <h3 class="subtitle">Canadian Food Inspection Agency</h3>
+                    <h2 class="title page-work-position">Web Developer</h2>
+                    <h3 class="subtitle page-work-company">Canadian Food Inspection Agency</h3>
+                    <h4 class="subtitle is-5 page-work-time">May 2018 - Aug 2018</h4>
                     <div class="content">
                         <ul>
                             <li>Developed an internal form catalog application utilizing a variety of tools including ASP.NET MVC 4 with C#, and other languages including Javascript, HTML, and CSS to provide CFIA employees a means to order physical copies
@@ -133,8 +148,9 @@
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
-                    <h2 class="title">Karate Instructor</h2>
-                    <h3 class="subtitle">Prodigy Martial Arts</h3>
+                    <h2 class="title page-work-position">Karate Instructor</h2>
+                    <h3 class="subtitle page-work-company">Prodigy Martial Arts</h3>
+                    <h4 class="subtitle is-5 page-work-time">Jan 2014 - Aug 2017</h4>
                     <div class="content">
                         <ul>
                             <li>Instructed Karate classes for students 4 and up, teaching them lessons of both physical and mental benefits including self defense, confidence, discipline and respect</li>
@@ -258,7 +274,6 @@
                 </article>
             </div>
         </div>
-        </div>
         <div id="page-games" hidden class="container ">
             <div class="tile is-parent">
                 <article class="tile is-child box">
@@ -335,7 +350,7 @@
             <span class="icon is-large footer-icon ">
                 <a aria-label="eros di pede linkedin" target="_blank " href="https://www.linkedin.com/in/erosdipede/ "><i class="fas fa-2x fab fa-linkedin "></i></a>
             </span>
-            <p style="padding-top:10px ">Copyright © Eros Di Pede 2019</p>
+            <p style="padding-top:10px ">Copyright © Eros Di Pede 2020</p>
             <a target="_blank " href="https://bulma.io "><img src="https://bulma.io/images/made-with-bulma--black.png " alt="Made with Bulma " width="163 " height="31 "></a>
         </div>
     </footer>

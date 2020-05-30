@@ -17,15 +17,15 @@
     #header-sub {
         font-size: 24px;
     }
-    
+
     li>a[id^="nav"]:focus,
     li>a[id^="nav"]:hover {
         background-color: #303030;
         text-decoration: underline;
     }
-
-    .date {
-        float: right;
+    
+    .page-work-company {
+        margin-bottom: 5px !important;
     }
     
     .project {
