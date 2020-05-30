@@ -1,55 +1,20 @@
+var currentPage = "nav-about"
+
 window.onload = function() {
     document.getElementById("dropdown-nav").selectedIndex = "0";
-    var navAbout = document.querySelectorAll("#nav-about");
-    var navWork = document.querySelectorAll("#nav-work");
-    var navProjects = document.querySelectorAll("#nav-projects");
-    var navGames = document.querySelectorAll("#nav-games");
+    var nav = document.querySelectorAll("[id^=nav]");
 
-    navAbout.forEach(function(elem) {
+    nav.forEach(function(elem) {
         elem.addEventListener("keyup", function(event) {
             event.preventDefault();
+            currentPage = event.target.id;
             if (event.keyCode === 13) {
-                document.getElementById("nav-about").click();
+                document.getElementById(currentPage).click();1
             }
         });
-        elem.addEventListener("click", function() {
-            handleNavigationClick("nav-about");
-        });
-    });
-
-    navWork.forEach(function(elem) {
-        elem.addEventListener("keyup", function(event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                document.getElementById("nav-work").click();
-            }
-        });
-        elem.addEventListener("click", function() {
-            handleNavigationClick("nav-work");
-        });
-    });
-
-    navProjects.forEach(function(elem) {
-        elem.addEventListener("keyup", function(event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                document.getElementById("nav-projects").click();
-            }
-        });
-        elem.addEventListener("click", function() {
-            handleNavigationClick("nav-projects");
-        });
-    });
-
-    navGames.forEach(function(elem) {
-        elem.addEventListener("keyup", function(event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                document.getElementById("nav-games").click();
-            }
-        });
-        elem.addEventListener("click", function() {
-            handleNavigationClick("nav-games");
+        elem.addEventListener("click", function(event) {
+            currentPage = event.target.id;
+            handleNavigationClick(currentPage);
         });
     });
 };
