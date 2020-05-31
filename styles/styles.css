@@ -24,10 +24,14 @@
         text-decoration: underline;
     }
     
-    .page-work-company {
+    .work-company {
         margin-bottom: 5px !important;
     }
-    
+
+    .work-duration { 
+        font-size: 1em;
+    }
+
     .project {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -73,7 +77,8 @@
         #nav {
             display: none !important;
         }
+     
         #dropdown-nav-div {
             display: inline-block !important;
-        }
+        }   
     }

@@ -1,5 +1,3 @@
-var currentPage = "nav-about"
-
 window.onload = function() {
     document.getElementById("dropdown-nav").selectedIndex = "0";
     var nav = document.querySelectorAll("[id^=nav]");
@@ -7,14 +5,12 @@ window.onload = function() {
     nav.forEach(function(elem) {
         elem.addEventListener("keyup", function(event) {
             event.preventDefault();
-            currentPage = event.target.id;
             if (event.keyCode === 13) {
-                document.getElementById(currentPage).click();1
+                document.getElementById(event.target.id).click();1
             }
         });
         elem.addEventListener("click", function(event) {
-            currentPage = event.target.id;
-            handleNavigationClick(currentPage);
+            handleNavigationClick(event.target.id);
         });
     });
 };
