@@ -24,11 +24,13 @@
         text-decoration: underline;
     }
     
-    .work-company {
+    .work-company,
+    .project-tech {
         margin-bottom: 5px !important;
     }
 
-    .work-duration { 
+    .work-duration, 
+    .project-state { 
         font-size: 1em;
     }
 
