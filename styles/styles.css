@@ -25,12 +25,14 @@
     }
     
     .work-company,
-    .project-tech {
+    .project-tech,
+    .game-tech {
         margin-bottom: 5px !important;
     }
 
     .work-duration, 
-    .project-state { 
+    .project-state,
+    .game-state { 
         font-size: 1em;
     }
 
