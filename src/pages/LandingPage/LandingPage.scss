@@ -1,10 +1,36 @@
-.name,
-.title {
-  background-color: #c4c4c4;
-  border-radius: 20px;
-  width: 80%;
+#name {
   font-size: 6vw;
 }
 
-.first-name {
+#role {
+  font-size: 5vw;
+}
+
+.specialty {
+  span {
+    font-weight: bold;
+  }
+}
+
+.landing {
+  margin-top: 120px;
+}
+
+.landing-panel {
+  border-radius: 20px;
+}
+
+.landing-panel-1 {
+  background-color: #c4c4c4;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.landing-panel-2 {
+  background-color: #363232;
+  color: #fffffa;
+  font-weight: bold;
+  h3 {
+    font-size: 3vw;
+  }
 }
