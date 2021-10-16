@@ -1,27 +1,24 @@
 import React from 'react';
+import image from '../../assets/landing-image.png';
 import './LandingPage.scss';
 
 function LandingPage() {
   return (
-    <div className="landing">
-      <div className="landing-panel landing-panel-1 container p-4 mx-auto">
-        <h1 id="name">
-          <span className="first-name font-bold">EROS</span> DI PEDE
-        </h1>
-      </div>
-      <div className="landing-panel landing-panel-1 container p-4 mx-auto">
-        <div id="landing-image" />
-        <h2 id="specialty">
-          <span>GAME</span>
-          and
-          <span>WEB</span>
-        </h2>
-        <h2 id="role">
-          <strong>DEVELOPER</strong>
-        </h2>
-      </div>
-      <div className="landing-panel landing-panel-2 container absolute p-4 w-48 m-10 h-1/2 top-0 right-0 mr-36 z-10 text-right">
-        <h3>LANGUAGES</h3>
+    <div id="landing">
+      <div className="section">
+        <div className="section__content relative">
+          <div className="landing-panel landing-panel--main mb-4">
+            <div className="landing-panel__content" />
+            <h1 id="name" className="w-3/4">
+              Eros Di Pede
+            </h1>
+            <h2 className="w-3/4">Developing games, and the web</h2>
+          </div>
+          <div className="landing-panel landing-panel--main">
+            <img src={image} alt="me" className="w-3/4" />
+          </div>
+          <div className="landing-panel landing-panel--sub absolute top-0 right-4" />
+        </div>
       </div>
     </div>
   );
