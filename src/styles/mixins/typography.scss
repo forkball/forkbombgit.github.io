@@ -1,0 +1,32 @@
+@import "../font-size.scss";
+@import "./breakpoints.scss";
+
+@mixin heading-1 {
+    font-size: $h1-font-size-desktop;
+    font-weight: bold;
+    line-height: 96px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.06em;
+    @include tablet {
+        font-size: $h1-font-size-tablet;
+    }
+    @include mobile {
+        font-size: $h1-font-size-mobile;
+    }
+}
+
+@mixin heading-2 {
+    font-size: $h2-font-size-desktop;
+    font-weight: normal;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    @include tablet {
+        font-size: $h2-font-size-tablet;
+    }
+    @include mobile {
+        font-size: $h2-font-size-mobile;
+    }
+}

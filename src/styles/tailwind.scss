@@ -1,0 +1,13 @@
+@import "./mixins/typography.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    @include heading-1;
+}
+
+h2 {
+    @include heading-2;
+}
