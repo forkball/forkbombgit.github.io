@@ -19,6 +19,7 @@
   "scripts": {
     "start": "npm run watch:css && react-scripts start",
     "build": "npm run watch:css && react-scripts build",
+    "lint": "eslint ./src/*.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/styles/tailwind.scss -o src/styles/tailwind-index.scss"
