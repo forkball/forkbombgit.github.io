@@ -107,12 +107,12 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="section px-4 desktop:px-0">
+      {/* <div className="section px-4 desktop:px-0">
         <div className="section__content">
           <h2>EXPERIENCE</h2>
           <div className="information-panel" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
