@@ -26,10 +26,3 @@ $max-desktop: 1600px;
     @content;
   }
 }
-
-:export {
-  mobile: $mobile;
-  tablet: $tablet;
-  desktop: $desktop;
-  max-desktop: $max-desktop;
-}

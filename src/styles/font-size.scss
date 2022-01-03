@@ -1,17 +1,9 @@
 $h1-font-size-desktop: 96px;
 $h1-font-size-tablet: 72px;
-$h1-font-size-mobile: 72px;
+$h1-font-size-mobile: 56px;
 
 $h2-font-size-desktop: 36px;
 $h2-font-size-tablet: 36px;
-$h2-font-size-mobile: 36px;
+$h2-font-size-mobile: 24px;
 
-:export {
-    h1-font-size-desktop: $h1-font-size-desktop;
-    h1-font-size-tablet: $h1-font-size-tablet;
-    h1-font-size-mobile: $h1-font-size-mobile;
-
-    h2-font-size-desktop: $h2-font-size-desktop;
-    h2-font-size-tablet: $h2-font-size-tablet;
-    h2-font-size-mobile: $h2-font-size-mobile;
-}
+$p-font-size: 20px;

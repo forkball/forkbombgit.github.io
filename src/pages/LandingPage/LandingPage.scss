@@ -1,75 +1,99 @@
-@import "../../styles/colors.scss";
-@import "../../styles/mixins/breakpoints.scss";
+@import '../../styles/colors.scss';
+@import '../../styles/mixins/breakpoints.scss';
 
 #landing {
   display: flex;
   flex-direction: column;
   align-items: center;
   .section {
-    height: 100vh;
     width: 100%;
     max-width: 1400px;
-    max-height: 944px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 96px;
+    @include tablet {
+      padding-right: 24px;
+      padding-left: 24px;
+      max-width: 768px;
+    }
+    @include mobile {
+      margin-bottom: 48px;
+    }
     &__content {
       width: 100%;
       max-width: 988px;
       .landing-panel {
-        border-radius: 20px;
+        border-radius: 24px;
         &--main {
           padding: 24px;
-          background-color: #c4c4c4;
+          background-color: $color-panel-primary;
           h2 {
-            margin-bottom: 32px;
+            margin-bottom: 24px;
           }
           img {
             border-radius: 24px;
-            max-width: 496px;
+            margin-right: 24px;
+            flex: 1;
+            @include tablet {
+              margin-bottom: 24px;
+            }
+            @include mobile {
+              margin-right: unset;
+            }
           }
         }
         &--sub {
           width: 208px;
           background-color: #363232;
           text-align: right;
-          &-open {
-            @include tablet {
-              opacity: 0.5;
-              &:hover {
-                opacity: 1;
-              }
+          .button-bar {
+            button,
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
             }
+          }
+          &-open {
             .button-bar {
               display: flex;
-              justify-content: end;
               align-items: center;
+              button {
+                width: 24px;
+              }
             }
-            padding: 24px;
+            padding: 16px;
           }
           &-closed {
             height: 40px;
             display: flex;
+            h2 {
+              margin-bottom: 0;
+              font-size: 24px;
+              color: $color-white;
+            }
             .button-bar {
-              margin-left: auto;
               margin-right: 16px;
+              margin-left: 16px;
               display: flex;
             }
           }
           ul {
             margin-bottom: 32px;
-            @include tablet { 
+            padding: 0px 8px;
+            @include tablet {
               margin-bottom: 24px;
             }
             @include mobile {
               margin-bottom: 16px;
             }
             color: $color-white;
-            font-family: "Roboto";
+            font-family: 'Roboto';
             &:before {
-              content:attr(aria-label);
-              font-family: "Roboto Condensed";
+              content: attr(aria-label);
+              font-family: 'Roboto Condensed';
               font-weight: bold;
               font-size: 28px;
             }
@@ -78,6 +102,11 @@
             color: $color-white;
           }
         }
+      }
+      .information-panel {
+        border-radius: 24px;
+        padding: 24px;
+        background-color: $color-panel-primary;
       }
     }
   }

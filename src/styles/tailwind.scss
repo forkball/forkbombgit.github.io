@@ -1,13 +1,17 @@
-@import "./mixins/typography.scss";
+@import './mixins/typography.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 h1 {
-    @include heading-1;
+  @include heading-1;
 }
 
 h2 {
-    @include heading-2;
+  @include heading-2;
+}
+
+p {
+  @include body;
 }
