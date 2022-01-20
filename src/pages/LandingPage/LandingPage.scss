@@ -22,9 +22,9 @@
     }
     &__content {
       width: 100%;
-      max-width: 988px;
+      max-width: 980px;
       .landing-panel {
-        border-radius: 24px;
+        border-radius: 14px;
         &--main {
           padding: 24px;
           background-color: $color-panel-primary;
@@ -32,8 +32,9 @@
             margin-bottom: 24px;
           }
           img {
-            border-radius: 24px;
+            border-radius: 14px;
             margin-right: 24px;
+            max-height: 672px;
             flex: 1;
             @include tablet {
               margin-bottom: 24px;
@@ -104,7 +105,7 @@
         }
       }
       .information-panel {
-        border-radius: 24px;
+        border-radius: 14px;
         padding: 24px;
         background-color: $color-panel-primary;
       }

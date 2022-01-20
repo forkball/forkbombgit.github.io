@@ -37,7 +37,7 @@ function LandingPage() {
             <div
               className={`landing-panel landing-panel--sub landing-panel--sub-${
                 drawerOpen ? 'open' : 'closed'
-              } absolute top-0 right-4`}
+              } absolute top-0 right-0`}
             >
               {drawerOpen && (
                 <div>
