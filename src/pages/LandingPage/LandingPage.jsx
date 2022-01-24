@@ -1,10 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FiChevronDown, FiChevronUp, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import image from '../../assets/me.jpg';
 import './LandingPage.scss';
 
 function LandingPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const drawerRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (drawerRef.current && !drawerRef.current.contains(event.target)) {
+        setDrawerOpen(false);
+      }
+    }
+
+    // Bind the event listener
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [drawerRef]);
 
   const handleDrawerCollapse = () => {
     setDrawerOpen(!drawerOpen);
@@ -25,7 +41,7 @@ function LandingPage() {
               <h2 className="font-nunito">Developing games, and the web</h2>
               <div className="flex flex-col desktop:flex-row">
                 <img src={image} alt="me" className="w-full desktop:w-3/4" />
-                <p className="font-roboto">
+                <p className="body-copy font-roboto">
                   In all areas of the stack, Eros is well equipped to address any challenge, whether
                   it be developing elegant, responsive websites, creating intuitive mobile
                   application experiences, or building robust, efficient backend solutions.
@@ -35,6 +51,7 @@ function LandingPage() {
               </div>
             </div>
             <div
+              ref={drawerRef}
               className={`landing-panel landing-panel--sub landing-panel--sub-${
                 drawerOpen ? 'open' : 'closed'
               } absolute top-0 right-0`}
