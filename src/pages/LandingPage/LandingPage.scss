@@ -24,7 +24,8 @@
       width: 100%;
       max-width: 980px;
       .landing-panel {
-        border-radius: 14px;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         &--main {
           padding: 24px;
           background-color: $color-panel-primary;
@@ -48,6 +49,7 @@
           }
         }
         &--sub {
+          box-shadow: none;
           width: 208px;
           background-color: #363232;
           text-align: right;
