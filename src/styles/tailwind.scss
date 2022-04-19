@@ -12,6 +12,14 @@ h2 {
   @include heading-2;
 }
 
-p {
+h3 {
+  @include heading-3;
+}
+
+h4 {
+  @include heading-4;
+}
+
+p, .body {
   @include body;
 }

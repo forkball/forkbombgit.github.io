@@ -33,11 +33,12 @@
             margin-bottom: 24px;
           }
           img {
-            border-radius: 14px;
+            border-radius: 12px;
             margin-right: 24px;
             max-height: 480px;
             flex: 1;
             @include tablet {
+              max-height: none;
               margin-bottom: 24px;
             }
             @include mobile {
@@ -50,13 +51,17 @@
         }
         &--sub {
           box-shadow: none;
-          width: 208px;
+          width: 452px;
           background-color: #363232;
-          text-align: right;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          @include tablet {
+            width: 100%;
+          }
           .button-bar {
             button,
             a {
               display: flex;
+              flex-wrap: wrap;
               align-items: center;
               justify-content: center;
               width: 24px;
@@ -110,9 +115,9 @@
         }
       }
       .information-panel {
-        border-radius: 14px;
-        padding: 24px;
+        border-radius: 12px;
         background-color: $color-panel-primary;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
     }
   }

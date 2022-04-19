@@ -20,7 +20,7 @@
 @mixin heading-2 {
   font-size: $h2-font-size-desktop;
   line-height: $h2-font-size-desktop;
-  font-weight: normal;
+  font-weight: bold;
   display: flex;
   letter-spacing: 0.05em;
   align-items: center;
@@ -34,7 +34,51 @@
   }
 }
 
-@mixin body {
-  font-size: $p-font-size;
+@mixin heading-3 {
+  font-size: $h3-font-size-desktop;
+  line-height: $h3-font-size-desktop;
+  font-weight: bold;
+  display: flex;
+  letter-spacing: 0.05em;
+  align-items: center;
+  @include tablet {
+    font-size: $h3-font-size-tablet;
+    line-height: $h3-font-size-tablet;
+  }
+  @include mobile {
+    font-size: $h3-font-size-mobile;
+    line-height: $h3-font-size-mobile;
+  }
+}
+
+@mixin heading-4 {
+  font-size: $h4-font-size-desktop;
+  line-height: $h4-font-size-desktop;
   font-weight: normal;
+  display: flex;
+  letter-spacing: 0.05em;
+  align-items: center;
+  @include tablet {
+    font-size: $h4-font-size-tablet;
+    line-height: $h4-font-size-tablet;
+  }
+  @include mobile {
+    font-size: $h4-font-size-mobile;
+    line-height: $h4-font-size-mobile;
+  }
+}
+
+@mixin body {
+  font-size: $p-font-size-desktop;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  @include tablet {
+    font-size: $p-font-size-tablet;
+    line-height: $p-font-size-tablet * 1.5;
+  }
+  @include mobile {
+    font-size: $p-font-size-mobile;
+    line-height: $p-font-size-mobile * 1.5;
+  }
 }

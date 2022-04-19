@@ -28,17 +28,19 @@ function LandingPage() {
 
   return (
     <div id="landing">
-      <div className="section mt-8 justify-center">
+      <div className="section mt-4 tablet:mt-8 justify-center">
+        <div className="section__content">
+          <h1
+            id="name"
+            className="font-roboto flex gap-0 tablet:gap-6 flex-col tablet:flex-row mobile:mt-6 tablet:mt-0"
+          >
+            EROS<span>DI PEDE</span>
+          </h1>
+          <h2 className="font-nunito mb-4">Developing games, and the web</h2>
+        </div>
         <div className="section__content relative">
           <div className="landing-panel landing-panel--main">
             <div className="landing-panel__content">
-              <h1
-                id="name"
-                className="font-roboto flex gap-0 tablet:gap-6 flex-col tablet:flex-row mobile:mt-6 tablet:mt-0"
-              >
-                EROS<span>DI PEDE</span>
-              </h1>
-              <h2 className="font-nunito">Developing games, and the web</h2>
               <div className="flex flex-col desktop:flex-row">
                 <img src={image} alt="me" className="w-full desktop:w-3/4" />
                 <p className="body-copy font-roboto">
@@ -54,11 +56,11 @@ function LandingPage() {
               ref={drawerRef}
               className={`landing-panel landing-panel--sub landing-panel--sub-${
                 drawerOpen ? 'open' : 'closed'
-              } absolute top-0 right-2`}
+              } absolute top-0 right-0`}
             >
               {drawerOpen && (
-                <div>
-                  <ul aria-label="LANGUAGES">
+                <div className="flex flex-wrap gap-4">
+                  <ul aria-label="LANGUAGES" className="flex-1">
                     <li>Javascript</li>
                     <li>Python</li>
                     <li>Java</li>
@@ -66,7 +68,7 @@ function LandingPage() {
                     <li>C#</li>
                     <li>Haskell</li>
                   </ul>
-                  <ul aria-label="TOOLS">
+                  <ul aria-label="TOOLS" className="flex-1">
                     <li>Node.js</li>
                     <li>React.js</li>
                     <li>Flutter</li>
@@ -77,7 +79,7 @@ function LandingPage() {
                     <li>AWS and DigitalOcean</li>
                     <li>Gradle</li>
                   </ul>
-                  <ul aria-label="HOBBIES">
+                  <ul aria-label="HOBBIES" className="flex-1">
                     <li>Video Games</li>
                     <li>Comics</li>
                     <li>Movies</li>
@@ -126,8 +128,30 @@ function LandingPage() {
       </div>
       {/* <div className="section px-4 desktop:px-0">
         <div className="section__content">
-          <h2>EXPERIENCE</h2>
-          <div className="information-panel" />
+          <h2 className="mb-4">EXPERIENCE</h2>
+          <div className="information-panel">
+            <ExperienceCard
+              title="Full Stack Developer"
+              company="Else Labs Inc."
+              imagePath={ExperienceOne}
+              experiences={[
+                'Lead the development of a web application using React.js to facilitate the extensive Oliver recipe creation process which improved the quality of life for recipe creators who previously solely relied on the mobile application.',
+              ]}
+            />
+            <ExperienceCard
+              title="Web Developer"
+              company="J&E Design Co."
+              imagePath={ExperienceOne}
+              experiences={[
+                'Developed responsive pages and components using React.js with Tailwind CSS to create an attractive website to provide potential clients with information about the business',
+                'Deployed a single page web application to Netlify with preview builds allowing developers to test changes prior to deploying to production',
+                'Implemented an email sending API utilizing Node.js and various modules to provide potential customers or employees a means to contact the business',
+              ]}
+            />
+            <div className="flex justify-center mb-2">
+              <FiChevronDown size={48} />
+            </div>
+          </div>
         </div>
       </div> */}
     </div>
