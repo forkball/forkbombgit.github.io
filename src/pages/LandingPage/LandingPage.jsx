@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FiChevronDown, FiChevronUp, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import image from '../../assets/me.jpg';
+import { ExperienceCard } from '../../components';
 import './LandingPage.scss';
 
 function LandingPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [expandExperiences, setExpandExperiences] = useState(false);
   const drawerRef = useRef(null);
 
   useEffect(() => {
@@ -24,6 +26,10 @@ function LandingPage() {
 
   const handleDrawerCollapse = () => {
     setDrawerOpen(!drawerOpen);
+  };
+
+  const handleExpandExperiences = () => {
+    setExpandExperiences(!expandExperiences);
   };
 
   return (
@@ -98,7 +104,7 @@ function LandingPage() {
                   rel="noreferrer"
                   className="mr-2"
                 >
-                  <FiMail size={20} />
+                  <FiMail size={24} />
                 </a>
                 <a
                   href="https://github.com/ForkBombGIT"
@@ -107,7 +113,7 @@ function LandingPage() {
                   rel="noreferrer"
                   className="mr-2"
                 >
-                  <FiGithub size={20} />
+                  <FiGithub size={24} />
                 </a>
                 <a
                   href="https://linkedin.com/in/erosdipede"
@@ -116,7 +122,7 @@ function LandingPage() {
                   rel="noreferrer"
                   className="mr-2"
                 >
-                  <FiLinkedin size={20} />
+                  <FiLinkedin size={24} />
                 </a>
                 <button type="button" className="ml-auto" onClick={() => handleDrawerCollapse()}>
                   {drawerOpen ? <FiChevronUp size={24} /> : <FiChevronDown size={24} />}
@@ -126,34 +132,87 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      {/* <div className="section px-4 desktop:px-0">
+      <div className="section px-4 desktop:px-0">
         <div className="section__content">
           <h2 className="mb-4">EXPERIENCE</h2>
           <div className="information-panel">
             <ExperienceCard
               title="Full Stack Developer"
               company="Else Labs Inc."
-              imagePath={ExperienceOne}
               experiences={[
                 'Lead the development of a web application using React.js to facilitate the extensive Oliver recipe creation process which improved the quality of life for recipe creators who previously solely relied on the mobile application.',
               ]}
+              timeSpan="May, 2021 - Present."
             />
             <ExperienceCard
               title="Web Developer"
               company="J&E Design Co."
-              imagePath={ExperienceOne}
               experiences={[
                 'Developed responsive pages and components using React.js with Tailwind CSS to create an attractive website to provide potential clients with information about the business',
                 'Deployed a single page web application to Netlify with preview builds allowing developers to test changes prior to deploying to production',
                 'Implemented an email sending API utilizing Node.js and various modules to provide potential customers or employees a means to contact the business',
               ]}
+              timeSpan="October, 2019 - Present."
             />
-            <div className="flex justify-center mb-2">
-              <FiChevronDown size={48} />
+            {expandExperiences && (
+              <>
+                <ExperienceCard
+                  title="Teaching Assistant"
+                  company="Carleton University"
+                  experiences={[
+                    'Facilitated office hours for students with questions regarding course material and assessments to better support their success in the course',
+                    'Cooperated with the course professor and other teaching assistants to ensure marking efforts were consistent, honest, and efficient',
+                    'Instructed workshops covering course concepts which were intended to aid students, and help them start on their assignments',
+                  ]}
+                  timeSpan="January, 2021 - April, 2021. September, 2019 - December, 2019."
+                />
+                <ExperienceCard
+                  title="Software Developer"
+                  company="IFS"
+                  experiences={[
+                    'Developed a variety of automated tests with Java for various IFS Maintenix clients such as UPS, Southwest Airlines, and AirFrance KLM to prevent problematic code changes from being merged into production',
+                    'Implemented an end to end Java testing project for an IFS Maintenix military client to provide developers an environment to implement and run e2e tests',
+                  ]}
+                  timeSpan="January, 2020 - August, 2020."
+                />
+                <ExperienceCard
+                  title="Web Developer"
+                  company="Statistics Canada"
+                  experiences={[
+                    "Developed a variety of React.js components for a project called the 'Innovation Radar', a single page web application with the goal of promoting and facilitating innovation throughout Statistics Canada",
+                    'Created various queries and mutations utilizing GraphQL to communicate with a PostgreSQL database to update, create, and retrieve data entries',
+                    "Developed unit tests for the 'Innovation Radar' utilizing Cypress to test functionality throughout the application",
+                  ]}
+                  timeSpan="September, 2018 - December, 2018."
+                />
+                <ExperienceCard
+                  title="Web Developer"
+                  company="Canadian Food Inspection Agency"
+                  experiences={[
+                    'Developed an internal form catalog application utilizing a variety of tools including ASP.NET MVC 4 with C#, and other languages including Javascript, HTML, and CSS to provide CFIA employees a means to order physical copies of forms',
+                    'Preformed quality assurance on various forms utilizing functional testing and unit testing to ensure that forms were both functioning properly, in addition to confirming that web pages were accessible according to WET 4 guidelines',
+                  ]}
+                  timeSpan="May, 2018 - August, 2018."
+                />
+                <ExperienceCard
+                  title="Karate Instructor"
+                  company="Prodigy Martial Arts"
+                  experiences={[
+                    'Instructed Karate classes for students 4 and up, teaching them lessons of both physical and mental benefits including self defense, confidence, discipline and respect',
+                    'Cooperated with other instructors to create new and inventive ways to teach children traditional karate to keep them engaged in a fun way',
+                  ]}
+                  timeSpan="January, 2014 - August, 2017."
+                />
+              </>
+            )}
+            <div className="section__content__expand flex justify-center mb-2">
+              <button type="button" onClick={() => handleExpandExperiences()}>
+                {expandExperiences ? <FiChevronUp size={48} /> : <FiChevronDown size={48} />}
+              </button>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import defaultExperience from '../../assets/work.png';
 import './ExperienceCard.scss';
 
-const ExperienceCard = ({ title, company, experiences, imagePath, containerClasses }) => (
+const ExperienceCard = ({ title, company, experiences, timeSpan, imagePath, containerClasses }) => (
   <div className={`experience-card ${containerClasses}`}>
     <img
-      className="experience-card__image tablet:mr-4"
+      className={`experience-card__image tablet:mr-4 ${
+        imagePath === defaultExperience ? 'opacity-50' : ''
+      }`}
       src={imagePath}
       alt={`experience at ${company}`}
     />
@@ -17,19 +20,23 @@ const ExperienceCard = ({ title, company, experiences, imagePath, containerClass
           <li className="mb-2">{experience}</li>
         ))}
       </ul>
+      <p>
+        <i>{timeSpan}</i>
+      </p>
     </div>
   </div>
 );
 
 ExperienceCard.defaultProps = {
   containerClasses: '',
-  imagePath: undefined,
+  imagePath: defaultExperience,
 };
 
 ExperienceCard.propTypes = {
   title: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
   experiences: PropTypes.arrayOf(PropTypes.string).isRequired,
+  timeSpan: PropTypes.string.isRequired,
   containerClasses: PropTypes.string,
   imagePath: PropTypes.string,
 };
