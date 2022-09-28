@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-bottom: 96px;
     @include tablet {
       padding-right: 24px;
@@ -25,15 +26,17 @@
       max-width: 980px;
       &__expand {
         border-radius: 12px;
-        background-color: #363232;
+        background-color: $color-panel-secondary;
         color: $color-white;
       }
-      .landing-panel {
+      .panel {
         border-radius: 12px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: $color-panel-primary;
+      }
+      .landing-panel {
         &--main {
           padding: 24px;
-          background-color: $color-panel-primary;
           h2 {
             margin-bottom: 24px;
           }
@@ -57,8 +60,8 @@
         &--sub {
           box-shadow: none;
           width: 452px;
-          background-color: #363232;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          background-color: $color-panel-secondary;
+          border-radius: 12px;
           @include tablet {
             width: 100%;
           }
@@ -119,10 +122,10 @@
           }
         }
       }
-      .information-panel {
-        border-radius: 12px;
-        background-color: $color-panel-primary;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      .projects-panel {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
     }
   }

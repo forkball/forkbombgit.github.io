@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FiChevronDown, FiChevronUp, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
-import image from '../../assets/me.jpg';
-import { ExperienceCard } from '../../components';
+import image from '../../assets/me.png';
+// import { ExperienceCard, ProjectCard } from '../../components';
 import './LandingPage.scss';
 
 function LandingPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [expandExperiences, setExpandExperiences] = useState(false);
   const drawerRef = useRef(null);
 
   useEffect(() => {
@@ -28,10 +27,6 @@ function LandingPage() {
     setDrawerOpen(!drawerOpen);
   };
 
-  const handleExpandExperiences = () => {
-    setExpandExperiences(!expandExperiences);
-  };
-
   return (
     <div id="landing">
       <div className="section mt-4 tablet:mt-8 justify-center">
@@ -45,7 +40,7 @@ function LandingPage() {
           <h2 className="font-nunito mb-4">Developing games, and the web</h2>
         </div>
         <div className="section__content relative">
-          <div className="landing-panel landing-panel--main">
+          <div className="panel landing-panel landing-panel--main">
             <div className="landing-panel__content">
               <div className="flex flex-col desktop:flex-row">
                 <img src={image} alt="me" className="w-full desktop:w-3/4" />
@@ -132,10 +127,10 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="section px-4 desktop:px-0">
+      {/* <div className="section px-4 desktop:px-0">
         <div className="section__content">
           <h2 className="mb-4">EXPERIENCE</h2>
-          <div className="information-panel">
+          <div className="panel experience-panel">
             <ExperienceCard
               title="Full Stack Developer"
               company="Else Labs Inc."
@@ -212,7 +207,17 @@ function LandingPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      {/* <div className="section px-4 desktop:px-0 flex">
+        <div className="section__content">
+          <h2 className="mb-4">PROJECTS</h2>
+          <div className="panel projects-panel flex">
+            <ProjectCard title="Scrambled Eggs" experiences={[]} containerClasses="w-1/2" />
+            <ProjectCard title="String Beans" experiences={[]} containerClasses="w-1/2" />
+            <ProjectCard title="Thompson Boiler Works" experiences={[]} containerClasses="w-1/2" />
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 }

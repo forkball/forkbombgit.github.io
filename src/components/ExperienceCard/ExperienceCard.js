@@ -28,6 +28,7 @@ const ExperienceCard = ({ title, company, experiences, timeSpan, imagePath, cont
 );
 
 ExperienceCard.defaultProps = {
+  experiences: [],
   containerClasses: '',
   imagePath: defaultExperience,
 };
@@ -35,7 +36,7 @@ ExperienceCard.defaultProps = {
 ExperienceCard.propTypes = {
   title: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
-  experiences: PropTypes.arrayOf(PropTypes.string).isRequired,
+  experiences: PropTypes.arrayOf(PropTypes.string),
   timeSpan: PropTypes.string.isRequired,
   containerClasses: PropTypes.string,
   imagePath: PropTypes.string,
