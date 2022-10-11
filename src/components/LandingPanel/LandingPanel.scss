@@ -13,7 +13,7 @@
         }
         &__content {
           width: 100%;
-          max-width: 1200px;
+          max-width: 1152px;
           align-content: center;
           @include tablet {
             max-width: 768px;
@@ -29,13 +29,15 @@
             gap: 24px;
             margin: unset;
             @include mobile {
+              padding: 16px;
+              gap: 16px;
               margin: 24px;
             }
             &__content {
               height: auto;
               gap: 24px;
-              h1, h2, img, p {
-                width: 525px;
+              h1, h2, p {
+                width: 544px;
                 @include tablet {
                   width: 350px
                 }
@@ -44,8 +46,12 @@
                   width: 100%;
                 }
               }
+              @include mobile {
+                gap: 16px;
+              }
               img {
-                height: 525px;
+                height: 480px;
+                width: 480px; 
                 border-radius: 12px;
                 aspect-ratio: 1/1;
                 @include tablet {
@@ -57,21 +63,16 @@
                   height: 100%;
                 }
               }
-              &__heading {
-                @include mobile {
-                  margin-bottom: 24px;
-                }
-              }
               &__body {
                 @include mobile {
-                  margin-bottom: 24px;
+                  margin-bottom: 16px;
                 }
               }
               &__bullets {
                 background-color: $color-panel-secondary;
                 border-radius: 12px;
                 padding: 16px;
-                width: 525px;
+                width: 480px;
                 @include tablet {
                   width: 350px
                 }

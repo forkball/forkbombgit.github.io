@@ -5,7 +5,7 @@ import './LandingPanel.scss';
 
 const LandingPanel = () => {
   return (
-    <div className="landing-section section my-12 mobile:my-4">
+    <div className="landing-section section desktop:my-24 tablet:my-12 mobile:my-0">
       <div className="section__content relative">
         <div className="panel landing-panel flex flex-col">
           <div className="landing-panel__content landing-panel__content--left flex tablet:flex-row flex-col">
