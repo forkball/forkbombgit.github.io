@@ -1,0 +1,106 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins/breakpoints.scss';
+
+.landing-section {
+    .section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include mobile {
+          margin-bottom: 48px;
+        }
+        &__content {
+          width: 100%;
+          max-width: 1200px;
+          align-content: center;
+          @include tablet {
+            max-width: 768px;
+          }
+          @include mobile {
+            max-width: 512px;
+          }
+          .landing-panel {
+            border-radius: 12px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: $color-panel-primary;
+            padding: 24px;
+            gap: 24px;
+            margin: unset;
+            @include mobile {
+              margin: 24px;
+            }
+            &__content {
+              height: auto;
+              gap: 24px;
+              h1, h2, img, p {
+                width: 525px;
+                @include tablet {
+                  width: 350px
+                }
+                @include mobile {
+                  max-width: 512px;
+                  width: 100%;
+                }
+              }
+              img {
+                height: 525px;
+                border-radius: 12px;
+                aspect-ratio: 1/1;
+                @include tablet {
+                  width: 350px; 
+                  height: 350px;
+                }
+                @include mobile {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              &__heading {
+                @include mobile {
+                  margin-bottom: 24px;
+                }
+              }
+              &__body {
+                @include mobile {
+                  margin-bottom: 24px;
+                }
+              }
+              &__bullets {
+                background-color: $color-panel-secondary;
+                border-radius: 12px;
+                padding: 16px;
+                width: 525px;
+                @include tablet {
+                  width: 350px
+                }
+                @include mobile {
+                  width: 100%;
+                }
+                ul {
+                  list-style-type: circle;
+                  list-style-position: inside;
+                  margin-bottom: 32px;
+                  padding: 0px 8px;
+                  @include tablet {
+                    margin-bottom: 24px;
+                  }
+                  @include mobile {
+                    margin-bottom: 16px;
+                  }
+                  color: $color-white;
+                  font-family: 'Nunito';
+                  &:before {
+                    content: attr(aria-label);
+                    font-family: 'Roboto Condensed';
+                    font-weight: bold;
+                    font-size: 28px;
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+}
