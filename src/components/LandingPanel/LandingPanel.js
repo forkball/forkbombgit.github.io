@@ -8,28 +8,19 @@ const LandingPanel = () => {
     <div className="landing-section section desktop:my-24 tablet:my-12 mobile:my-0">
       <div className="section__content relative">
         <div className="panel landing-panel flex flex-col">
-          <div className="landing-panel__content landing-panel__content--left flex tablet:flex-row flex-col">
-            <div className="landing-panel__content__heading flex flex-col justify-center">
-              <h1 id="name" className="font-roboto flex gap-0 flex-col">
+          <div className="landing-panel__content landing-panel__content--left flex tablet:flex-row flex-col flex-col-reverse">
+            <img src={image} alt="me" />
+            <div className="landing-panel__content__heading flex flex-col justify-center text-center tablet:text-left">
+              <h1
+                id="name"
+                className="font-roboto flex tablet:gap-0 gap-4 flex-row tablet:flex-col justify-center tablet:justify-start"
+              >
                 EROS<span>DI PEDE</span>
               </h1>
               <h2 className="font-nunito mb-0 desktop:mb-4">Developing games, and the web</h2>
             </div>
-            <img src={image} alt="me" />
           </div>
-          <div className="landing-panel__content landing-panel__content--right flex tablet:flex-row flex-col">
-            <div className="landing-panel__content__body flex flex-col">
-              <p className="font-roboto">
-                In all areas of the stack, Eros is well equipped to address any challenge, whether
-                it be developing elegant, responsive websites, creating intuitive mobile application
-                experiences, or building robust, efficient backend solutions.
-              </p>
-              <br />
-              <p className="font-roboto">
-                Additionally, Eros is passionate about video games and is working on game
-                development projects both in physical and digital mediums.
-              </p>
-            </div>
+          <div className="landing-panel__content landing-panel__content--right flex tablet:flex-row flex-col flex-col-reverse">
             <div className="landing-panel__content__bullets">
               <div className="flex flex-wrap gap-4">
                 <ul aria-label="LANGUAGES" className="flex-1">
@@ -61,6 +52,18 @@ const LandingPanel = () => {
                   <li>Music</li>
                 </ul>
               </div>
+            </div>
+            <div className="landing-panel__content__body flex flex-col text-center tablet:text-left">
+              <p className="font-roboto">
+                In all areas of the stack, Eros is well equipped to address any challenge, whether
+                it be developing elegant, responsive websites, creating intuitive mobile application
+                experiences, or building robust, efficient backend solutions.
+              </p>
+              <br />
+              <p className="font-roboto">
+                Additionally, Eros is passionate about video games and is working on game
+                development projects both in physical and digital mediums.
+              </p>
             </div>
           </div>
         </div>
