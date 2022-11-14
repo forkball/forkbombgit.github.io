@@ -18,7 +18,7 @@ function Screen({ className }) {
               <p>FULLSTACK AND GAME DEVELOPER</p>
             </div>
           </div>
-          <div className="handheld-screen__interface__content__body flex tablet:flex-row flex-col tablet:flex-row-reverse">
+          <div className="handheld-screen__interface__content__body flex flex-col">
             <div className="handheld-screen__content__body flex flex-col text-left">
               <p>
                 In all areas of the stack, Eros is well equipped to address any challenge, whether
@@ -27,7 +27,7 @@ function Screen({ className }) {
               </p>
             </div>
           </div>
-          <div className="handheld-screen__interface__content__page flex flex-col items-end">
+          <div className="handheld-screen__interface__content__page flex flex-col mt-auto items-end">
             <p>1/2</p>
           </div>
         </div>
