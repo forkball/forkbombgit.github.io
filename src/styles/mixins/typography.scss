@@ -1,4 +1,5 @@
 @import '../font-size.scss';
+@import '../colors.scss';
 @import './breakpoints.scss';
 
 @mixin heading-1 {
@@ -7,6 +8,7 @@
   font-weight: bold;
   display: flex;
   letter-spacing: -0.06em;
+  color: $color-black;
   @include tablet {
     font-size: $h1-font-size-tablet;
     line-height: $h1-font-size-tablet;
@@ -24,6 +26,7 @@
   display: flex;
   letter-spacing: 0.05em;
   align-items: center;
+  color: $color-black;
   @include tablet {
     font-size: $h2-font-size-tablet;
     line-height: $h2-font-size-tablet;
@@ -41,6 +44,7 @@
   display: flex;
   letter-spacing: 0.05em;
   align-items: center;
+  color: $color-secondary;
   @include tablet {
     font-size: $h3-font-size-tablet;
     line-height: $h3-font-size-tablet;
@@ -70,6 +74,7 @@
 
 @mixin body {
   font-size: $p-font-size-desktop;
+  line-height: $p-font-size-desktop * 2;
   font-weight: normal;
   display: flex;
   align-items: center;

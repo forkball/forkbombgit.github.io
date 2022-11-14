@@ -1,14 +1,13 @@
 import React from 'react';
 // import { ExperienceCard, ProjectCard } from '../../components';
 import './LandingPage.scss';
-import { LandingPanel } from '../../components';
-import ParticleBackground from '../../components/ParticleBackground';
+import { Device } from '../../components';
+// import ParticleBackground from '../../components/ParticleBackground';
 
 function LandingPage() {
   return (
-    <div id="landing">
-      <ParticleBackground />
-      <LandingPanel />
+    <div className="flex justify-center items-center py-4 h-screen">
+      <Device />
     </div>
   );
 }

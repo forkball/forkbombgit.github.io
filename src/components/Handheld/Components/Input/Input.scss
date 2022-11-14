@@ -1,0 +1,25 @@
+.handheld-input {
+  width: 576px;
+  height: 408px;
+  &__panel {
+    &--left {
+      .handheld-input__panel__controls {
+        padding: 16px;
+      }
+    }
+    &__controls {
+        width: 252px;
+        height: 252px;
+        border-radius: 56px;
+        background-color: #bd8522;
+        &--a,&--b,&--c,&--d {
+          justify-self: center;
+          place-self: center;
+          width: 72px;
+          height: 72px;
+          border-radius: 9999px;
+          background-color: #E9ECEC;
+        }
+    }
+  }
+}

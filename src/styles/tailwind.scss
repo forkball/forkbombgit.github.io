@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Pkmn';
+  src: url(../assets/fonts/Pkmn.ttf);
+}
+
 h1 {
   @include heading-1;
 }

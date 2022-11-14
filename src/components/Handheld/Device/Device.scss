@@ -1,0 +1,16 @@
+@import '../../../styles/colors.scss';
+
+.handheld {
+    padding: 24px;
+    max-width: 784px;
+    height: 960px;
+    background-color: $color-secondary;
+    border-radius: 12px;
+    border-left: 6px solid $color-black;
+    &__screen {
+        height: 504px;
+        padding: 12px;
+        border-radius: 12px;
+        background-color: black;
+    }
+}

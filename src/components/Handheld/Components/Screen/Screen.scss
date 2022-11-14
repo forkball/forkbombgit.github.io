@@ -1,0 +1,47 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/mixins/breakpoints.scss';
+
+.handheld-screen {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: $color-black;
+  padding: 16px;
+  gap: 24px;
+  margin: unset;
+  width: 576px;
+  height: 480px;
+  @include mobile {
+    padding: 16px;
+    gap: 16px;
+    margin: 24px;
+  }
+  &__interface {
+    background-color: $color-background;
+    width: 432px;
+    height: 480px;
+    img {
+      width: 150px; 
+      height: 150px;
+      aspect-ratio: 1/1;
+    }
+    &__navigation {
+      background-color: $color-primary;
+    }
+    &__content {
+      padding: 8px;
+      &__heading {
+        gap: 8px;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid $color-primary;
+        p {
+          line-height: unset;
+        }
+      }
+      &__page {
+        p {
+          line-height: unset;
+        }
+      }
+    }
+  }
+}

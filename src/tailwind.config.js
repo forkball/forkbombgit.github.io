@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         nunito: ['Nunito', 'sans-serif'],
+        pixel: ['Pkmn', 'sans-serif'],
       },
     },
   },
