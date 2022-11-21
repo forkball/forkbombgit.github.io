@@ -1,10 +1,22 @@
 .handheld-input {
   width: 576px;
   margin-top: 24px;
+  &__navigation {
+    height: 32px;
+    margin-bottom: 16px;
+    &__controls {
+      justify-self: center;
+      place-self: center;
+      width: 72px;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #E9ECEC;
+    }
+  }
   &__panel {
     &--left {
       .handheld-input__panel__controls {
-        padding: 16px;
+        padding: 32px;
       }
     }
     &__controls {

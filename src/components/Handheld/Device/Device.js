@@ -6,7 +6,7 @@ import './Device.scss';
 
 function Device({ classes }) {
   return (
-    <div className={`handheld flex flex-col h-full shadow-lg gap-8 ${classes}`}>
+    <div className={`handheld flex flex-col shadow-lg gap-2 ${classes}`}>
       <div className="handheld__screen flex justify-center">
         <Screen />
       </div>
