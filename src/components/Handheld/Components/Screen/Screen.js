@@ -3,34 +3,83 @@ import PropTypes from 'prop-types';
 import image from '../../../../assets/me.png';
 import './Screen.scss';
 
-function Screen({ className }) {
+function Screen({ className, panel }) {
+  const renderPanel = () => {
+    switch (panel) {
+      case 1:
+        return (
+          <div className="handheld-screen__interface__content flex flex-col h-full w-full">
+            <div className="handheld-screen__interface__content__body flex flex-col text-left gap-4">
+              <div className="handheld-screen__interface__content__body__section">
+                <h2>LANGUAGES/</h2>
+                <ol className="grid grid-cols-2">
+                  <li>JAVASCRIPT</li>
+                  <li>PYTHON</li>
+                  <li>JAVA</li>
+                  <li>C++</li>
+                  <li>C#</li>
+                </ol>
+              </div>
+              <div className="handheld-screen__interface__content__body__section">
+                <h2>TOOLS/</h2>
+                <ol className="grid grid-cols-2">
+                  <li>REACT.JS</li>
+                  <li>REACT NATIVE</li>
+                  <li>NODE.JS</li>
+                  <li>DOCKER</li>
+                  <li>CLOUD SERVICES</li>
+                  <li>MONGODB</li>
+                  <li>POSTGRESQL</li>
+                </ol>
+              </div>
+              <div className="handheld-screen__interface__content__body__section">
+                <h2>HOBBIES/</h2>
+                <ol className="grid grid-cols-2">
+                  <li>ROCK CLIMBING</li>
+                  <li>PHOTOGRAPHY</li>
+                  <li>VIDEO GAMES</li>
+                  <li>MUSIC</li>
+                </ol>
+              </div>
+            </div>
+            <div className="handheld-screen__interface__content__page flex flex-col mt-auto items-end">
+              <p>2/2</p>
+            </div>
+          </div>
+        );
+      default:
+        return (
+          <div className="handheld-screen__interface__content flex flex-col h-full w-full">
+            <div className="handheld-screen__interface__content__heading flex">
+              <div className="flex flex-col gap-2">
+                <h2 id="name">NAME/</h2>
+                <p>EROS DI PEDE</p>
+                <h2>ROLES/</h2>
+                <p>FULLSTACK AND GAME DEVELOPER</p>
+              </div>
+              <img src={image} alt="me" />
+            </div>
+            <div className="handheld-screen__interface__content__body flex flex-col">
+              <div className="handheld-screen__content__body flex flex-col text-left">
+                <p>
+                  In all areas of the stack, Eros is well equipped to address any challenge, whether
+                  it be developing elegant, responsive websites, creating intuitive mobile
+                  application experiences, or building robust, efficient backend solutions.
+                </p>
+              </div>
+            </div>
+            <div className="handheld-screen__interface__content__page flex flex-col mt-auto items-end">
+              <p>1/2</p>
+            </div>
+          </div>
+        );
+    }
+  };
+
   return (
     <div className={`handheld-screen flex flex-col justify-center items-center ${className}`}>
       <div className="handheld-screen__interface flex flex-col h-full font-pixel">
-        <div className="handheld-screen__interface__navigation w-full h-24" />
-        <div className="handheld-screen__interface__content">
-          <div className="handheld-screen__interface__content__heading flex">
-            <div className="flex flex-col gap-2">
-              <h2 id="name">NAME/</h2>
-              <p>EROS DI PEDE</p>
-              <h2>ROLES/</h2>
-              <p>FULLSTACK AND GAME DEVELOPER</p>
-            </div>
-            <img src={image} alt="me" />
-          </div>
-          <div className="handheld-screen__interface__content__body flex flex-col">
-            <div className="handheld-screen__content__body flex flex-col text-left">
-              <p>
-                In all areas of the stack, Eros is well equipped to address any challenge, whether
-                it be developing elegant, responsive websites, creating intuitive mobile application
-                experiences, or building robust, efficient backend solutions.
-              </p>
-            </div>
-          </div>
-          <div className="handheld-screen__interface__content__page flex flex-col mt-auto items-end">
-            <p>1/2</p>
-          </div>
-        </div>
+        {renderPanel()}
         <div />
       </div>
     </div>
@@ -39,10 +88,12 @@ function Screen({ className }) {
 
 Screen.propTypes = {
   className: PropTypes.string,
+  panel: PropTypes.number,
 };
 
 Screen.defaultProps = {
   className: '',
+  panel: 0,
 };
 
 export default Screen;
