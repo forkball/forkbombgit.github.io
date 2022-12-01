@@ -8,11 +8,11 @@ function Screen({ className, panel }) {
     switch (panel) {
       case 1:
         return (
-          <div className="handheld-screen__interface__content flex flex-col h-full w-full">
+          <div className="handheld-screen__interface__content flex flex-col h-full w-full overflow-y-auto">
             <div className="handheld-screen__interface__content__body flex flex-col text-left gap-4">
               <div className="handheld-screen__interface__content__body__section">
                 <h2>LANGUAGES/</h2>
-                <ol className="grid grid-cols-2">
+                <ol className="grid grid-cols-1 desktop:grid-cols-2">
                   <li>JAVASCRIPT</li>
                   <li>PYTHON</li>
                   <li>JAVA</li>
@@ -22,7 +22,7 @@ function Screen({ className, panel }) {
               </div>
               <div className="handheld-screen__interface__content__body__section">
                 <h2>TOOLS/</h2>
-                <ol className="grid grid-cols-2">
+                <ol className="grid grid-cols-1 desktop:grid-cols-2">
                   <li>REACT.JS</li>
                   <li>REACT NATIVE</li>
                   <li>NODE.JS</li>
@@ -34,7 +34,7 @@ function Screen({ className, panel }) {
               </div>
               <div className="handheld-screen__interface__content__body__section">
                 <h2>HOBBIES/</h2>
-                <ol className="grid grid-cols-2">
+                <ol className="grid grid-cols-1 desktop:grid-cols-2">
                   <li>ROCK CLIMBING</li>
                   <li>PHOTOGRAPHY</li>
                   <li>VIDEO GAMES</li>
@@ -49,7 +49,7 @@ function Screen({ className, panel }) {
         );
       default:
         return (
-          <div className="handheld-screen__interface__content flex flex-col h-full w-full">
+          <div className="handheld-screen__interface__content flex flex-col h-full w-full overflow-y-auto">
             <div className="handheld-screen__interface__content__heading flex">
               <div className="flex flex-col gap-2">
                 <h2 id="name">NAME/</h2>
