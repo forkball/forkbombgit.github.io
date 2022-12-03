@@ -1,15 +1,25 @@
 @import '../../../styles/colors.scss';
+@import '../../../styles/mixins/breakpoints.scss';
 .handheld {
     padding: 24px;
     max-width: 784px;
-    min-height: 880px;
+    min-height: 650px;
     max-height: 1200px;
     background-color: $color-secondary;
     border-radius: 12px;
     border-left: 6px solid $color-black;
+    @include tablet {
+        padding: 16px;
+        width: 100%;
+        height: 100%;
+        max-width: unset;
+        min-height: unset;
+        max-height: unset;
+        border-radius: 0px;
+        border-left: unset;
+    }
     &__screen {
-
-        padding: 12px;
+        padding: 4px;
         border-radius: 12px;
         background-color: black;
     }

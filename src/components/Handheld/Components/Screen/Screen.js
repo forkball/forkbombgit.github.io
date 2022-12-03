@@ -1,14 +1,20 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import image from '../../../../assets/me.png';
 import './Screen.scss';
+// import { MAXIMUM_SCREEN_HEIGHT } from '../../../../constants';
 
-function Screen({ className, panel }) {
+const Screen = forwardRef(({ className, panel }, ref) => {
   const renderPanel = () => {
     switch (panel) {
+      // overview panel
       case 1:
         return (
-          <div className="handheld-screen__interface__content flex flex-col h-full w-full overflow-y-auto">
+          <div
+            ref={ref}
+            className="handheld-screen__interface__content flex flex-col h-full w-full overflow-y-auto"
+          >
             <div className="handheld-screen__interface__content__body flex flex-col text-left gap-4">
               <div className="handheld-screen__interface__content__body__section">
                 <h2>LANGUAGES/</h2>
@@ -47,10 +53,17 @@ function Screen({ className, panel }) {
             </div>
           </div>
         );
+      // landing panel
       default:
         return (
-          <div className="handheld-screen__interface__content flex flex-col h-full w-full overflow-y-auto">
-            <div className="handheld-screen__interface__content__heading flex">
+          <div
+            ref={ref}
+            className="handheld-screen__interface__content flex flex-col h-full w-full overflow-y-auto"
+          >
+            <div
+              id="landing-panel"
+              className="handheld-screen__interface__content__heading flex flex-row"
+            >
               <div className="flex flex-col gap-2">
                 <h2 id="name">NAME/</h2>
                 <p>EROS DI PEDE</p>
@@ -63,13 +76,13 @@ function Screen({ className, panel }) {
               <div className="handheld-screen__content__body flex flex-col text-left">
                 <p>
                   In all areas of the stack, Eros is well equipped to address any challenge, whether
-                  it be developing elegant, responsive websites, creating intuitive mobile
-                  application experiences, or building robust, efficient backend solutions.
+                  it be deve&shy;loping elegant, responsive websites, creating intuitive mobile
+                  application experien&shy;ces, or building robust, efficient backend solutions.
                 </p>
               </div>
             </div>
-            <div className="handheld-screen__interface__content__page flex flex-col mt-auto items-end">
-              <p>1/2</p>
+            <div className="handheld-screen__interface__content__page flex mt-auto">
+              <p className="ml-auto">1/2</p>
             </div>
           </div>
         );
@@ -84,7 +97,7 @@ function Screen({ className, panel }) {
       </div>
     </div>
   );
-}
+});
 
 Screen.propTypes = {
   className: PropTypes.string,

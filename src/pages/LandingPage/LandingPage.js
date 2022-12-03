@@ -4,10 +4,9 @@ import { Device } from '../../components';
 
 function LandingPage() {
   return (
-    <div className="flex flex-col items-center py-2 scroll-y-overflow">
-      <Device classes="hidden tablet:block " />
-      <p className="font-pixel block tablet:hidden">under construction...</p>
-      <h1 className="mr-auto fixed bottom-0 left-0">forkball.games</h1>
+    <div className="flex flex-col items-center py-0 desktop:py-2 h-screen">
+      <Device classes=" " />
+      <h1 className="mr-auto bottom-0 left-0 hidden tablet:block fixed">forkball.games</h1>
     </div>
   );
 }

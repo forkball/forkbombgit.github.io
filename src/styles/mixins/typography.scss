@@ -80,8 +80,10 @@
   align-items: center;
   @include tablet {
     font-size: $p-font-size-tablet;
+    line-height: $p-font-size-tablet * 2;
   }
   @include mobile {
     font-size: $p-font-size-mobile;
+    line-height: $p-font-size-mobile * 2;
   }
 }

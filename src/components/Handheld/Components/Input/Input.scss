@@ -16,25 +16,25 @@
       height: 100%;
       border-radius: 9999px;
       background-color: #E9ECEC;
+      @include mobile {
+        width: 56px;
+      }
     }
   }
   &__panel {
-    &--left {
-      .handheld-input__panel__controls {
-        padding: 32px;
-        @include tablet {
-          padding: 16px;
-        }
-      }
-    }
     &__controls {
-        width: 252px;
-        height: 252px;
+        width: 210px;
+        height: 210px;
         border-radius: 56px;
         background-color: #bd8522;
-        @include tablet {
-          width: 210px;
-          height: 210px;
+        padding: 16px;
+        @include mobile {
+          width: 168px;
+          height: 168px;
+        }
+        // smallest mobile
+        @media (max-width: 300px) {
+          width: 126px;
         }
         &--a,&--b,&--c,&--d {
           justify-self: center;
@@ -43,6 +43,16 @@
           height: 72px;
           border-radius: 9999px;
           background-color: #E9ECEC;
+
+          @include mobile {
+            width: 56px;
+            height: 56px;
+          }
+          // smallest mobile
+          @media (max-width: 300px) {
+            width: 48px;
+            height: 48px;
+          }
         }
     }
   }
