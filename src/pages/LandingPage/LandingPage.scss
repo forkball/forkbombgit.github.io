@@ -1,5 +1,9 @@
 @import "../../styles/colors.scss";
-h1 {
-    padding: 16px;
-    background-color: $color-white
+
+.landing {
+    height: 100vh;
+    h1 {
+        padding: 16px;
+        background-color: $color-white
+    } 
 }

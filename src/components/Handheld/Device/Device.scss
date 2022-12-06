@@ -8,7 +8,7 @@
     background-color: $color-secondary;
     border-radius: 12px;
     border-left: 6px solid $color-black;
-    @include tablet {
+    @include mobile {
         padding: 16px;
         width: 100%;
         height: 100%;

@@ -4,15 +4,13 @@
 .handheld-screen {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: $color-black;
-  padding: 16px;
-  gap: 24px;
   margin: unset;
-  width: 576px;
-  height: 480px;
+
   @include tablet {
-    width: 480px;
+    width: 100%;
     height: 400px;
   }
+  
   @include mobile {
     width: 100%;
     height: 320px;
@@ -20,6 +18,15 @@
     gap: 16px;
     margin: 24px;
   }
+
+
+  @include desktop {
+    width: 576px;
+    height: 480px;
+    padding: 16px;
+    gap: 24px;
+  }
+
   &__interface {
     background-color: $color-background;
     width: 432px;
@@ -28,11 +35,11 @@
     
     @include tablet {
       width: 360px;
-      height: 400px;
+      height: 200px;
     }
 
     @media (max-width: 500px) {
-      width: 216px;
+      width: 100%;
       height: 240px;
     }
 
@@ -77,15 +84,8 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 432px;
+        width: 100%;
         background-color: $color-primary;
-        @include tablet {
-          width: 360px;
-        }
-        // small phones
-        @media (max-width: 500px) {
-          width: 216px;
-        }
         p {
           line-height: unset;
           color: $color-white;

@@ -34,7 +34,7 @@ function Device({ classes }) {
       <div className="handheld__screen flex justify-center">
         <Screen ref={panelRef} panel={panel} />
       </div>
-      <div className="handheld__input flex">
+      <div className="handheld__input flex mt-auto">
         <Input
           handleLeft={onLeftPress}
           handleRight={onRightPress}
