@@ -9,6 +9,21 @@ function Device({ classes }) {
   const [panel, setPanel] = useState(0);
   const panelRef = useRef(null);
 
+  const scrollSpeed = 25;
+  const scrollDistance = 250;
+  const scrollStep = 25;
+
+  const scroll = (direction, speed, distance, step) => {
+    let scrollAmount = 0;
+    const slideTimer = setInterval(() => {
+      panelRef.current.scrollTop += step * direction;
+      scrollAmount += step;
+      if (scrollAmount >= distance) {
+        window.clearInterval(slideTimer);
+      }
+    }, speed);
+  };
+
   const onLeftPress = () => {
     if (panel > 0) setPanel(panel - 1);
   };
@@ -19,13 +34,13 @@ function Device({ classes }) {
 
   const onUpPress = () => {
     if (panelRef.current) {
-      panelRef.current.scrollTop -= 100;
+      scroll(-1, scrollSpeed, scrollDistance, scrollStep);
     }
   };
 
   const onDownPress = () => {
     if (panelRef.current) {
-      panelRef.current.scrollTop += 100;
+      scroll(1, scrollSpeed, scrollDistance, scrollStep);
     }
   };
 
@@ -34,7 +49,6 @@ function Device({ classes }) {
       <div className="handheld__screen flex justify-center">
         <Screen ref={panelRef} panel={panel} />
       </div>
-      <h1 className="mr-auto bottom-0 left-0 hidden tablet:block fixed">forkball.games</h1>
       <div className="handheld__input flex mt-auto">
         <Input
           handleLeft={onLeftPress}
@@ -43,7 +57,7 @@ function Device({ classes }) {
           handleUp={onUpPress}
         />
       </div>
-      <h1 className="text-center block tablet:hidden">forkball.games</h1>
+      <h1 className="text-center">forkball.games</h1>
     </div>
   );
 }
