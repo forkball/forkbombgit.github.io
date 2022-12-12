@@ -3,13 +3,12 @@
 
 .handheld-input {
   width: 576px;
-  margin-top: 24px;
-  margin-bottom: 32px;
   @include tablet {
     width: 100%;
   }
   @include mobile {
-    margin-top: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .button-wrapper {
     border-radius: 9999px;
@@ -28,11 +27,15 @@
     background-color: #bd8522;
     max-width: 50%;
     border-radius: 56px;
-    margin-bottom: 16px;
     padding: 8px 48px 8px 48px;
     @include tablet {
       max-width: unset;
     }
+    // smaller mobile
+    @media (max-width: 500px) {
+      margin-bottom: 8px;
+    } 
+    
     &__controls {
       .button-wrapper {
         width: 76px;

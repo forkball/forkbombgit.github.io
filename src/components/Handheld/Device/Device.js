@@ -45,7 +45,7 @@ function Device({ classes }) {
   };
 
   return (
-    <div className={`handheld flex flex-col shadow-lg gap-2 ${classes}`}>
+    <div className={`handheld flex flex-col shadow-lg ${classes}`}>
       <div className="handheld__screen flex justify-center">
         <Screen ref={panelRef} panel={panel} />
       </div>
