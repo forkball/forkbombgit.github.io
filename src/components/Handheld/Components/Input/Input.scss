@@ -1,27 +1,68 @@
 @import "../../../../styles/mixins/breakpoints.scss";
+@import '../../../../styles/colors.scss';
 
 .handheld-input {
   width: 576px;
+  margin-top: 24px;
+  margin-bottom: 32px;
   @include tablet {
     width: 100%;
-    margin-top: 24px;
   }
   @include mobile {
     margin-top: 16px;
   }
-  &__navigation {
-    height: 32px;
-    margin-bottom: 16px;
-    &__controls {
-      justify-self: center;
-      place-self: center;
-      width: 72px;
-      height: 100%;
+  .button-wrapper {
+    border-radius: 9999px;
+    background-color: #8f641a;
+    position: relative;
+    button {
+      position: absolute;
       border-radius: 9999px;
       background-color: #E9ECEC;
-      @include mobile {
-        width: 56px;
+      &:hover {
+        background-color: #d4d6d6;
       }
+    }
+  }
+  &__navigation {
+    background-color: #bd8522;
+    max-width: 50%;
+    border-radius: 56px;
+    margin-bottom: 16px;
+    padding: 8px 48px 8px 48px;
+    @include tablet {
+      max-width: unset;
+    }
+    &__controls {
+      .button-wrapper {
+        width: 76px;
+        height: 36px;
+        @include tablet {
+          width: 60px;
+          height: 36px;
+        }
+        // smallest mobile
+        @include mobile  {
+          width: 52px;
+          height: 28px;
+        }
+        button {
+          left: 2px;
+          top: 0px;
+          width: 72px;
+          height: 32px;
+          position: relative;
+          @include tablet {
+            width: 56px;
+            height: 32px;
+          }
+          // smallest mobile
+          @include mobile  {
+            width: 48px;
+            height: 24px;
+          }
+        }
+      } 
     }
   }
   &__panel {
@@ -31,31 +72,47 @@
         border-radius: 56px;
         background-color: #bd8522;
         padding: 16px;
-        @include mobile {
+
+        @include tablet {
           width: 168px;
           height: 168px;
         }
-        // smallest mobile
-        @media (max-width: 330px) {
-          width: 126px;
+        @include mobile {
+          width: 140px;
+          height: 140px;
+          padding: 8px;
         }
-        &--a,&--b,&--c,&--d {
-          justify-self: center;
-          place-self: center;
-          width: 72px;
-          height: 72px;
-          border-radius: 9999px;
-          background-color: #E9ECEC;
 
-          @include mobile {
-            width: 56px;
-            height: 56px;
-          }
-          // smallest mobile
-          @media (max-width: 330px) {
-            width: 48px;
-            height: 48px;
-          }
+        &--a,&--b,&--c,&--d {
+          place-self: center;
+          .button-wrapper {
+            width: 76px;
+            height: 76px;
+            @include tablet {
+              width: 60px;
+              height: 60px;
+            }
+            // smallest mobile
+            @include mobile  {
+              width: 52px;
+              height: 52px;
+            }
+            button {
+              left: 2px;
+              top: 0px;
+              width: 72px;
+              height: 72px;
+              @include tablet {
+                width: 56px;
+                height: 56px;
+              }
+              // smallest mobile
+              @include mobile  {
+                width: 48px;
+                height: 48px;
+              }
+            }
+          } 
         }
     }
   }

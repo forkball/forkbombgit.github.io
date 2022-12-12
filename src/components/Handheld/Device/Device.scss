@@ -8,6 +8,10 @@
     background-color: $color-secondary;
     border-radius: 12px;
     border-left: 6px solid $color-black;
+    h1 {
+        padding: 16px;
+        background-color: $color-white
+    } 
     @include mobile {
         padding: 16px;
         width: 100%;
@@ -15,11 +19,16 @@
         max-width: unset;
         min-height: unset;
         max-height: unset;
-        border-radius: 0px;
         border-left: unset;
+        border-radius: 0px;
+        h1 {
+            border-radius: 12px;
+            color: #E9ECEC;
+            background-color: #bd8522;
+        }
     }
     &__screen {
-        padding: 4px;
+        padding: 8px;
         border-radius: 12px;
         background-color: black;
     }

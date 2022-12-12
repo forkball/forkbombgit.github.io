@@ -31,9 +31,11 @@ function Device({ classes }) {
 
   return (
     <div className={`handheld flex flex-col shadow-lg gap-2 ${classes}`}>
+      <h1 className="text-center block tablet:hidden">forkball.games</h1>
       <div className="handheld__screen flex justify-center">
         <Screen ref={panelRef} panel={panel} />
       </div>
+      <h1 className="mr-auto bottom-0 left-0 hidden tablet:block fixed">forkball.games</h1>
       <div className="handheld__input flex mt-auto">
         <Input
           handleLeft={onLeftPress}
