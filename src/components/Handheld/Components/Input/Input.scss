@@ -8,7 +8,7 @@
   }
   @include mobile {
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 8px;
   }
   .button-wrapper {
     border-radius: 9999px;
@@ -30,11 +30,8 @@
     padding: 8px 48px 8px 48px;
     @include tablet {
       max-width: unset;
-    }
-    // smaller mobile
-    @media (max-width: 500px) {
       margin-bottom: 8px;
-    } 
+    }
     
     &__controls {
       .button-wrapper {
