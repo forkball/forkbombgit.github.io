@@ -31,7 +31,6 @@ function Device({ classes }) {
 
   return (
     <div className={`handheld flex flex-col shadow-lg gap-2 ${classes}`}>
-      <h1 className="text-center block tablet:hidden">forkball.games</h1>
       <div className="handheld__screen flex justify-center">
         <Screen ref={panelRef} panel={panel} />
       </div>
@@ -44,6 +43,7 @@ function Device({ classes }) {
           handleUp={onUpPress}
         />
       </div>
+      <h1 className="text-center block tablet:hidden">forkball.games</h1>
     </div>
   );
 }
