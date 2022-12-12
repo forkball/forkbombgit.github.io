@@ -49,14 +49,14 @@ function Device({ classes }) {
       <div className="handheld__screen flex justify-center">
         <Screen ref={panelRef} panel={panel} />
       </div>
-      <div className="handheld__input flex flex-col w-full self-center">
+      <div className="handheld__input flex flex-col w-full h-full self-center">
         <Input
           handleLeft={onLeftPress}
           handleRight={onRightPress}
           handleDown={onDownPress}
           handleUp={onUpPress}
         />
-        <h1 className="text-center">forkball.games</h1>
+        <h1 className="mt-auto">forkball.games</h1>
       </div>
     </div>
   );
