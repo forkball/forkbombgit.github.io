@@ -3,12 +3,9 @@
 
 .handheld-input {
   width: 576px;
+  margin-bottom: 8px;
   @include tablet {
     width: 100%;
-  }
-  @include mobile {
-    margin-top: 0px;
-    margin-bottom: 8px;
   }
   .button-wrapper {
     border-radius: 9999px;
