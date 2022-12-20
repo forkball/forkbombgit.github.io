@@ -9,6 +9,21 @@
     background-color: $color-secondary;
     border-radius: 12px;
     border-left: 6px solid $color-black;
+    // horizontal handheld variant
+    &--horizontal {
+        max-width: 1100px;
+        padding: 16px;
+        min-height: unset;
+        .handheld__input {
+            max-width: unset;
+        }
+        h1 {
+            max-width: 576px;
+            @include tablet {
+                max-width: 392px;
+            }
+        }
+    }
     h1 {
         padding: 16px;
         border-radius: 12px;
