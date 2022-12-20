@@ -63,7 +63,7 @@ function Device({ classes }) {
           handleDown={onDownPress}
           handleUp={onUpPress}
         />
-        <h1 className="mt-auto">forkball.games</h1>
+        {/* <h1 className="mt-auto">forkball.games</h1> */}
       </div>
     </div>
   );
@@ -78,7 +78,7 @@ function Device({ classes }) {
           handleUp={onUpPress}
           Screen={<Screen ref={panelRef} panel={panel} />}
         />
-        <h1 className="mt-auto w-full">forkball.games</h1>
+        {/* <h1 className="mt-auto w-full">forkball.games</h1> */}
       </div>
     </div>
   );
