@@ -61,7 +61,7 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
             screenVariant ? 'flex' : 'hidden'
           }`}
         >
-          <div className="handheld-input__embedded-screen__screen m-2">{Screen}</div>
+          <div className="handheld-input__embedded-screen__screen">{Screen}</div>
           <div className="handheld-input__navigation flex justify-center self-center gap-2">
             <div className="handheld-input__navigation__controls col-start-2 ">
               <div className="button-wrapper">

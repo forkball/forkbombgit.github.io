@@ -23,6 +23,9 @@
                 max-width: 392px;
             }
         }
+        @include tablet {
+            padding: 8px;
+        }
     }
     h1 {
         padding: 16px;

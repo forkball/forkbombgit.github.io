@@ -5,7 +5,11 @@
   width: 576px;
   margin-bottom: 8px;
   &--horizontal {
-    width: 1128px;;
+    width: 1128px;
+    margin-bottom: 0px;
+    .handheld-input__navigation {
+      margin-bottom: 0px;
+    }
   }
   @include tablet {
     width: 100%;
@@ -25,6 +29,15 @@
   }
   &__embedded-screen {
     padding: 0px 16px 0px 16px;
+    &__screen {
+      margin: 16px;
+      @include tablet {
+        margin: 8px;
+      }
+    }
+    @include tablet {
+      padding: 0px 8px 0px 8px;
+    }
   }
   &__navigation {
     background-color: #bd8522;
