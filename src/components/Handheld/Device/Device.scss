@@ -6,7 +6,7 @@
     max-width: 784px;
     min-height: 650px;
     max-height: 1200px;
-    background-color: $color-secondary;
+    background-color: $color-device-primary;
     border-radius: 12px;
     border-left: 6px solid $color-black;
     // horizontal handheld variant
@@ -31,7 +31,7 @@
         padding: 16px;
         border-radius: 12px;
         color: $color-white;
-        background-color: #bd8522;
+        background-color: $color-device-primary-dark;
         @include mobile {
             padding: 8px;
         }

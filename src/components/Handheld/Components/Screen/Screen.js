@@ -1,11 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import image from '../../../../assets/me.png';
 import './Screen.scss';
 // import { MAXIMUM_SCREEN_HEIGHT } from '../../../../constants';
 
-const Screen = forwardRef(({ className, panel }, ref) => {
+const Screen = forwardRef(({ className, panel, scrollDirection }, ref) => {
+  useEffect(() => {
+    // eslint-disable-next-line no-param-reassign
+    ref.current.scrollTop = 0;
+  }, [panel]);
+
   const renderPanel = () => {
     switch (panel) {
       // overview panel
@@ -48,8 +53,9 @@ const Screen = forwardRef(({ className, panel }, ref) => {
                 </ol>
               </div>
             </div>
-            <div className="handheld-screen__interface__content__page flex flex-col mt-auto items-end">
-              <p>2/2</p>
+            <div className="handheld-screen__interface__content__page flex mt-auto">
+              <p>{scrollDirection}</p>
+              <p className="ml-auto">2/2</p>
             </div>
           </div>
         );
@@ -82,6 +88,7 @@ const Screen = forwardRef(({ className, panel }, ref) => {
               </div>
             </div>
             <div className="handheld-screen__interface__content__page flex mt-auto">
+              <p>{scrollDirection}</p>
               <p className="ml-auto">1/2</p>
             </div>
           </div>
@@ -102,11 +109,13 @@ const Screen = forwardRef(({ className, panel }, ref) => {
 Screen.propTypes = {
   className: PropTypes.string,
   panel: PropTypes.number,
+  scrollDirection: PropTypes.string,
 };
 
 Screen.defaultProps = {
   className: '',
   panel: 0,
+  scrollDirection: 'DOWN',
 };
 
 export default Screen;

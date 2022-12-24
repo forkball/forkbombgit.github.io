@@ -16,14 +16,16 @@
   }
   .button-wrapper {
     border-radius: 9999px;
-    background-color: #8f641a;
+    background-color: $color-device-primary-shadow;
     position: relative;
     button {
       position: absolute;
       border-radius: 9999px;
-      background-color: #E9ECEC;
+      background-color: $color-device-secondary;
+      color: $color-device-primary-dark;
+      font-weight: 600;
       &:hover {
-        background-color: #d4d6d6;
+        background-color: $color-device-secondary-dark;
       }
     }
   }
@@ -40,13 +42,15 @@
     }
   }
   &__navigation {
-    background-color: #bd8522;
+    background-color: $color-device-primary-dark;
     max-width: 50%;
     border-radius: 56px;
     padding: 8px 48px 8px 48px;
+    font-size: 12px;
     @include tablet {
       max-width: unset;
       margin-bottom: 8px;
+      font-size: 10px;
     }
     
     &__controls {
@@ -86,7 +90,7 @@
         width: 210px;
         height: 210px;
         border-radius: 56px;
-        background-color: #bd8522;
+        background-color: $color-device-primary-dark;
         padding: 16px;
 
         @include tablet {
@@ -101,6 +105,7 @@
 
         &--a,&--b,&--c,&--d {
           place-self: center;
+          font-size: 24px;
           .button-wrapper {
             width: 76px;
             height: 76px;

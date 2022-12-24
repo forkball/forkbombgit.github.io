@@ -11,20 +11,28 @@ function Device({ classes }) {
   const panelRef = useRef(null);
 
   const [panel, setPanel] = useState(0);
+  const [panelScrollDir, setPanelScrollDir] = useState('DOWN');
   const [windowHeight, setWindowHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
 
   const scrollSpeed = 25;
   const scrollDistance = 250;
   const scrollStep = 25;
+  const scrollBoundaryThreshold = 100;
 
   const scroll = (direction, speed, distance, step) => {
     let scrollAmount = 0;
+    const { scrollTop, offsetHeight, scrollHeight } = panelRef.current;
     const slideTimer = setInterval(() => {
       panelRef.current.scrollTop += step * direction;
       scrollAmount += step;
       if (scrollAmount >= distance) {
         window.clearInterval(slideTimer);
+        // change scroll direction text
+        if (scrollHeight - (offsetHeight + scrollTop) < scrollBoundaryThreshold) {
+          if (direction === 1) setPanelScrollDir('UP');
+          else setPanelScrollDir('DOWN');
+        }
       }
     }, speed);
   };
@@ -54,7 +62,7 @@ function Device({ classes }) {
   const renderVerticalDevice = () => (
     <div className={`handheld flex flex-col shadow-lg ${classes}`}>
       <div className="handheld__screen flex justify-center">
-        <Screen ref={panelRef} panel={panel} />
+        <Screen ref={panelRef} panel={panel} scrollDirection={panelScrollDir} />
       </div>
       <div className="handheld__input flex flex-col w-full h-full self-center">
         <Input
@@ -76,7 +84,7 @@ function Device({ classes }) {
           handleRight={onRightPress}
           handleDown={onDownPress}
           handleUp={onUpPress}
-          Screen={<Screen ref={panelRef} panel={panel} />}
+          Screen={<Screen ref={panelRef} panel={panel} scrollDirection={panelScrollDir} />}
         />
         {/* <h1 className="mt-auto w-full">forkball.games</h1> */}
       </div>
