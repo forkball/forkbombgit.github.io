@@ -5,13 +5,14 @@ import Input from '../Components/Input';
 import './Device.scss';
 
 const NUMBER_OF_PANELS = 1;
-const MINIMUM_HEIGHT = 900;
-const MAXIMUM_WIDTH = 728;
+const MINIMUM_HORIZONTAL_VIEW_HEIGHT = 900;
+const MAXIMUM_HORIZONTAL_VIEW_WIDTH = 728;
+const TABLET_VIEW_WIDTH = 1152;
 function Device({ classes }) {
   const panelRef = useRef(null);
 
   const [panel, setPanel] = useState(0);
-  const [panelScrollDir, setPanelScrollDir] = useState('DOWN');
+  const [panelScrollDir, setPanelScrollDir] = useState('');
   const [windowHeight, setWindowHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -94,9 +95,13 @@ function Device({ classes }) {
   useEffect(() => {
     setWindowHeight(window.innerHeight);
     setWindowWidth(window.innerWidth);
+
+    // set initial panel scroll direction if screen is small
+    if (window.innerWidth < TABLET_VIEW_WIDTH) setPanelScrollDir('DOWN');
   }, []);
 
-  if (windowHeight < MINIMUM_HEIGHT && windowWidth > MAXIMUM_WIDTH) return renderHorizontalDevice();
+  if (windowHeight < MINIMUM_HORIZONTAL_VIEW_HEIGHT && windowWidth > MAXIMUM_HORIZONTAL_VIEW_WIDTH)
+    return renderHorizontalDevice();
   return renderVerticalDevice();
 }
 
