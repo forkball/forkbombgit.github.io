@@ -30,7 +30,10 @@ function Device({ classes }) {
       if (scrollAmount >= distance) {
         window.clearInterval(slideTimer);
         // change scroll direction text
-        if (scrollHeight - (offsetHeight + scrollTop) < scrollBoundaryThreshold) {
+        if (
+          scrollHeight - (offsetHeight + scrollTop) < scrollBoundaryThreshold &&
+          window.innerWidth < TABLET_VIEW_WIDTH
+        ) {
           if (direction === 1) setPanelScrollDir('UP');
           else setPanelScrollDir('DOWN');
         }
