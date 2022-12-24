@@ -44,7 +44,6 @@
   display: flex;
   letter-spacing: 0.05em;
   align-items: center;
-  color: $color-secondary;
   @include tablet {
     font-size: $h3-font-size-tablet;
     line-height: $h3-font-size-tablet;
