@@ -7,19 +7,17 @@ import './Device.scss';
 const NUMBER_OF_PANELS = 1;
 const MINIMUM_HORIZONTAL_VIEW_HEIGHT = 900;
 const MAXIMUM_HORIZONTAL_VIEW_WIDTH = 728;
-const TABLET_VIEW_WIDTH = 1152;
 function Device({ classes }) {
   const panelRef = useRef(null);
 
   const [panel, setPanel] = useState(0);
-  const [panelScrollDir, setPanelScrollDir] = useState('');
+  const [panelScrollDir, setPanelScrollDir] = useState('DOWN');
   const [windowHeight, setWindowHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
 
   const scrollSpeed = 25;
-  const scrollDistance = 250;
   const scrollStep = 25;
-  const scrollBoundaryThreshold = 100;
+  const scrollBoundaryThreshold = 50;
 
   const scroll = (direction, speed, distance, step) => {
     let scrollAmount = 0;
@@ -30,10 +28,8 @@ function Device({ classes }) {
       if (scrollAmount >= distance) {
         window.clearInterval(slideTimer);
         // change scroll direction text
-        if (
-          scrollHeight - (offsetHeight + scrollTop) < scrollBoundaryThreshold &&
-          window.innerWidth < TABLET_VIEW_WIDTH
-        ) {
+        const scrollPosition = Math.max(0, scrollHeight - (offsetHeight + scrollTop + distance));
+        if (scrollPosition < scrollBoundaryThreshold) {
           if (direction === 1) setPanelScrollDir('UP');
           else setPanelScrollDir('DOWN');
         }
@@ -42,23 +38,27 @@ function Device({ classes }) {
   };
 
   const onLeftPress = () => {
+    setPanelScrollDir('DOWN');
     if (panel > 0) setPanel(panel - 1);
     else setPanel(NUMBER_OF_PANELS);
   };
 
   const onRightPress = () => {
+    setPanelScrollDir('DOWN');
     if (panel < NUMBER_OF_PANELS) setPanel(panel + 1);
     else setPanel(0);
   };
 
   const onUpPress = () => {
     if (panelRef.current) {
+      const scrollDistance = panelRef.current.scrollHeight * 0.33;
       scroll(-1, scrollSpeed, scrollDistance, scrollStep);
     }
   };
 
   const onDownPress = () => {
     if (panelRef.current) {
+      const scrollDistance = panelRef.current.scrollHeight * 0.33;
       scroll(1, scrollSpeed, scrollDistance, scrollStep);
     }
   };
@@ -98,9 +98,6 @@ function Device({ classes }) {
   useEffect(() => {
     setWindowHeight(window.innerHeight);
     setWindowWidth(window.innerWidth);
-
-    // set initial panel scroll direction if screen is small
-    if (window.innerWidth < TABLET_VIEW_WIDTH) setPanelScrollDir('DOWN');
   }, []);
 
   if (windowHeight < MINIMUM_HORIZONTAL_VIEW_HEIGHT && windowWidth > MAXIMUM_HORIZONTAL_VIEW_WIDTH)

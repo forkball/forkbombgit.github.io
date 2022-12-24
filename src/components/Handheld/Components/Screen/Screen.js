@@ -23,17 +23,18 @@ const Screen = forwardRef(({ className, panel, scrollDirection }, ref) => {
             <div className="handheld-screen__interface__content__body flex flex-col text-left gap-4">
               <div className="handheld-screen__interface__content__body__section">
                 <h2>LANGUAGES/</h2>
-                <ol className="grid grid-cols-1 desktop:grid-cols-2">
+                <ol className="list-disc list-inside">
                   <li>JAVASCRIPT</li>
                   <li>PYTHON</li>
                   <li>JAVA</li>
                   <li>C++</li>
                   <li>C#</li>
+                  <li>HASKELL</li>
                 </ol>
               </div>
               <div className="handheld-screen__interface__content__body__section">
                 <h2>TOOLS/</h2>
-                <ol className="grid grid-cols-1 desktop:grid-cols-2">
+                <ol className="list-disc list-inside">
                   <li>REACT.JS</li>
                   <li>REACT NATIVE</li>
                   <li>NODE.JS</li>
@@ -45,11 +46,13 @@ const Screen = forwardRef(({ className, panel, scrollDirection }, ref) => {
               </div>
               <div className="handheld-screen__interface__content__body__section">
                 <h2>HOBBIES/</h2>
-                <ol className="grid grid-cols-1 desktop:grid-cols-2">
+                <ol className="list-disc list-inside">
                   <li>ROCK CLIMBING</li>
                   <li>PHOTOGRAPHY</li>
                   <li>VIDEO GAMES</li>
                   <li>MUSIC</li>
+                  <li>COMICS</li>
+                  <li>FILM</li>
                 </ol>
               </div>
             </div>
@@ -71,8 +74,8 @@ const Screen = forwardRef(({ className, panel, scrollDirection }, ref) => {
               className="handheld-screen__interface__content__heading flex flex-row"
             >
               <div className="flex flex-col gap-2">
-                <h2 id="name">NAME/</h2>
-                <p>EROS DI PEDE</p>
+                <h2>NAME/</h2>
+                <p id="name">EROS DI PEDE</p>
                 <h2>ROLES/</h2>
                 <p>FULLSTACK AND GAME DEVELOPER</p>
               </div>
