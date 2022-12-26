@@ -11,6 +11,7 @@
     border-left: 6px solid $color-black;
     // horizontal handheld variant
     &--horizontal {
+        gap: 0px;
         max-width: 1100px;
         padding: 16px;
         min-height: unset;
@@ -28,13 +29,8 @@
         }
     }
     h1 {
-        padding: 16px;
-        border-radius: 12px;
-        color: $color-white;
-        background-color: $color-device-primary-dark;
-        @include mobile {
-            padding: 8px;
-        }
+        color: $color-device-primary-dark;
+        font-size: 16px;
     } 
     @include mobile {
         padding: 8px;

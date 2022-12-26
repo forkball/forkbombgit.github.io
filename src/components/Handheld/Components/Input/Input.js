@@ -3,7 +3,16 @@ import PropTypes from 'prop-types';
 import './Input.scss';
 import { AiFillCaretUp, AiFillCaretDown, AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 
-function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
+function Input({
+  handleLeft,
+  handleRight,
+  handleUp,
+  handleDown,
+  handleStart,
+  handleA,
+  handleB,
+  Screen,
+}) {
   const screenVariant = Screen !== undefined;
   return (
     <div
@@ -18,12 +27,7 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
       >
         <div className="handheld-input__navigation__controls col-start-2 ">
           <div className="button-wrapper">
-            <button
-              className="font-roboto"
-              type="button"
-              aria-label="input_select"
-              onClick={() => {}}
-            >
+            <button className="font-roboto" type="button" aria-label="select" onClick={() => {}}>
               SELECT
             </button>
           </div>
@@ -33,8 +37,8 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
             <button
               className="font-roboto"
               type="button"
-              aria-label="input_start"
-              onClick={() => {}}
+              aria-label="start, open menu"
+              onClick={handleStart}
             >
               START
             </button>
@@ -52,7 +56,7 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
               <div className="button-wrapper">
                 <button
                   type="button"
-                  aria-label="input_up"
+                  aria-label="up input"
                   onClick={handleUp}
                   className="flex justify-center items-center"
                 >
@@ -64,7 +68,7 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
               <div className="button-wrapper">
                 <button
                   type="button"
-                  aria-label="input_left"
+                  aria-label="left input"
                   onClick={handleLeft}
                   className="flex justify-center items-center"
                 >
@@ -76,7 +80,7 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
               <div className="button-wrapper">
                 <button
                   type="button"
-                  aria-label="input_right"
+                  aria-label="right input"
                   onClick={handleRight}
                   className="flex justify-center items-center"
                 >
@@ -88,7 +92,7 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
               <div className="button-wrapper">
                 <button
                   type="button"
-                  aria-label="input_down"
+                  aria-label="down input"
                   onClick={handleDown}
                   className="flex justify-center items-center"
                 >
@@ -110,7 +114,7 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
                 <button
                   className="font-roboto"
                   type="button"
-                  aria-label="input_select"
+                  aria-label="select"
                   onClick={() => {}}
                 >
                   SELECT
@@ -122,8 +126,8 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
                 <button
                   className="font-roboto"
                   type="button"
-                  aria-label="input_start"
-                  onClick={() => {}}
+                  aria-label="start, open menu"
+                  onClick={handleStart}
                 >
                   START
                 </button>
@@ -142,8 +146,8 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
                 <button
                   className="font-roboto"
                   type="button"
-                  aria-label="input_b"
-                  onClick={() => {}}
+                  aria-label="b, back out"
+                  onClick={handleB}
                 >
                   B
                 </button>
@@ -154,8 +158,8 @@ function Input({ handleLeft, handleRight, handleUp, handleDown, Screen }) {
                 <button
                   className="font-roboto"
                   type="button"
-                  aria-label="input_a"
-                  onClick={() => {}}
+                  aria-label="a, advance"
+                  onClick={handleA}
                 >
                   A
                 </button>
@@ -173,6 +177,9 @@ Input.propTypes = {
   handleRight: PropTypes.func,
   handleUp: PropTypes.func,
   handleDown: PropTypes.func,
+  handleStart: PropTypes.func,
+  handleA: PropTypes.func,
+  handleB: PropTypes.func,
   Screen: PropTypes.objectOf(PropTypes.object),
 };
 
@@ -181,6 +188,9 @@ Input.defaultProps = {
   handleRight: () => {},
   handleUp: () => {},
   handleDown: () => {},
+  handleStart: () => {},
+  handleA: () => {},
+  handleB: () => {},
   Screen: undefined,
 };
 

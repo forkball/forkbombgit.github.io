@@ -3,122 +3,99 @@ import React, { forwardRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import image from '../../../../assets/me.png';
 import './Screen.scss';
+import { BioPanel, BriefPanel, SocialPanel } from '../../Panels';
 // import { MAXIMUM_SCREEN_HEIGHT } from '../../../../constants';
 
-const Screen = forwardRef(({ className, panel, scrollDirection }, ref) => {
-  useEffect(() => {
-    // eslint-disable-next-line no-param-reassign
-    ref.current.scrollTop = 0;
-  }, [panel]);
+const Screen = forwardRef(
+  ({ className, panel, panelSet, scrollDirection, showMenu, menuIndex, menuControls }, ref) => {
+    useEffect(() => {
+      // eslint-disable-next-line no-param-reassign
+      ref.current.scrollTop = 0;
+    }, [panel]);
 
-  const renderPanel = () => {
-    switch (panel) {
-      // overview panel
-      case 1:
-        return (
-          <div
-            ref={ref}
-            className="handheld-screen__interface__content flex flex-col h-full w-full overflow-y-auto"
-          >
-            <div className="handheld-screen__interface__content__body flex flex-col text-left gap-4">
-              <div className="handheld-screen__interface__content__body__section">
-                <h2>LANGUAGES/</h2>
-                <ol className="list-disc list-inside">
-                  <li>JAVASCRIPT</li>
-                  <li>PYTHON</li>
-                  <li>JAVA</li>
-                  <li>C++</li>
-                  <li>C#</li>
-                  <li>HASKELL</li>
-                </ol>
-              </div>
-              <div className="handheld-screen__interface__content__body__section">
-                <h2>TOOLS/</h2>
-                <ol className="list-disc list-inside">
-                  <li>REACT.JS</li>
-                  <li>REACT NATIVE</li>
-                  <li>NODE.JS</li>
-                  <li>DOCKER</li>
-                  <li>CLOUD SERVICES</li>
-                  <li>MONGODB</li>
-                  <li>POSTGRESQL</li>
-                </ol>
-              </div>
-              <div className="handheld-screen__interface__content__body__section">
-                <h2>HOBBIES/</h2>
-                <ol className="list-disc list-inside">
-                  <li>ROCK CLIMBING</li>
-                  <li>PHOTOGRAPHY</li>
-                  <li>VIDEO GAMES</li>
-                  <li>MUSIC</li>
-                  <li>COMICS</li>
-                  <li>FILM</li>
-                </ol>
-              </div>
-            </div>
-            <div className="handheld-screen__interface__content__page flex mt-auto">
-              <p>{scrollDirection}</p>
-              <p className="ml-auto">2/2</p>
-            </div>
-          </div>
-        );
-      // landing panel
-      default:
-        return (
-          <div
-            ref={ref}
-            className="handheld-screen__interface__content flex flex-col h-full w-full overflow-y-auto"
-          >
-            <div
-              id="landing-panel"
-              className="handheld-screen__interface__content__heading flex flex-row"
+    const renderPanel = () => {
+      switch (panelSet) {
+        case 1:
+          switch (panel) {
+            default:
+              return <SocialPanel ref={ref} scrollDirection={scrollDirection} />;
+          }
+        default:
+          switch (panel) {
+            // overview panel
+            case 1:
+              return <BriefPanel ref={ref} scrollDirection={scrollDirection} />;
+            // landing panel
+            default:
+              return <BioPanel ref={ref} image={image} scrollDirection={scrollDirection} />;
+          }
+      }
+    };
+    const renderMenu = () => {
+      return showMenu ? (
+        <div className="handheld-screen__interface__menu absolute h-full w-1/2 right-0 top-0">
+          <ol className="handheld-screen__interface__menu__items">
+            <li
+              className={`handheld-screen__interface__menu__items__item${
+                menuIndex === 0 ? '--selected' : ''
+              }`}
             >
-              <div className="flex flex-col gap-2">
-                <h2>NAME/</h2>
-                <p id="name">EROS DI PEDE</p>
-                <h2>ROLES/</h2>
-                <p>FULLSTACK AND GAME DEVELOPER</p>
-              </div>
-              <img src={image} alt="me" />
-            </div>
-            <div className="handheld-screen__interface__content__body flex flex-col">
-              <div className="handheld-screen__content__body flex flex-col text-left">
-                <p>
-                  In all areas of the stack, Eros is well equipped to address any challenge, whether
-                  it be deve&shy;loping elegant, responsive websites, creating intuitive mobile
-                  application experien&shy;ces, or building robust, efficient backend solutions.
-                </p>
-              </div>
-            </div>
-            <div className="handheld-screen__interface__content__page flex mt-auto">
-              <p>{scrollDirection}</p>
-              <p className="ml-auto">1/2</p>
-            </div>
-          </div>
-        );
-    }
-  };
+              <button type="button" onClick={menuControls[0]}>
+                ABOUT
+              </button>
+            </li>
+            <li
+              className={`handheld-screen__interface__menu__items__item${
+                menuIndex === 1 ? '--selected' : ''
+              }`}
+            >
+              <button type="button" onClick={menuControls[1]}>
+                SOCIALS
+              </button>
+            </li>
+          </ol>
+        </div>
+      ) : null;
+    };
 
-  return (
-    <div className={`handheld-screen flex flex-col justify-center items-center ${className}`}>
-      <div className="handheld-screen__interface flex flex-col h-full font-pixel">
-        {renderPanel()}
-        <div />
+    return (
+      <div className={`handheld-screen flex flex-col justify-center items-center ${className}`}>
+        <div className="handheld-screen__interface flex flex-col h-full font-pixel relative">
+          {renderPanel()}
+          {renderMenu()}
+        </div>
       </div>
-    </div>
-  );
-});
+    );
+  },
+);
 
 Screen.propTypes = {
   className: PropTypes.string,
   panel: PropTypes.number,
+  panelSet: PropTypes.number,
   scrollDirection: PropTypes.string,
+  showMenu: PropTypes.bool,
+  menuIndex: PropTypes.number,
+  menuControls: PropTypes.arrayOf(PropTypes.func),
 };
 
 Screen.defaultProps = {
   className: '',
   panel: 0,
+  panelSet: 0,
   scrollDirection: 'DOWN',
+  showMenu: false,
+  menuIndex: 0,
+  menuControls: [
+    () => {
+      // eslint-disable-next-line no-console
+      console.log('about');
+    },
+    () => {
+      // eslint-disable-next-line no-console
+      console.log('socials');
+    },
+  ],
 };
 
 export default Screen;
