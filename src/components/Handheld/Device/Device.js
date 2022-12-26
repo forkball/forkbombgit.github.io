@@ -12,7 +12,7 @@ function Device({ classes }) {
   const panelRef = useRef(null);
 
   const [panel, setPanel] = useState(0);
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
   const [menuIndex, setMenuIndex] = useState(0);
   const [panelSet, setPanelSet] = useState(0);
   const [panelScrollDir, setPanelScrollDir] = useState('DOWN');
