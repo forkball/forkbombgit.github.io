@@ -7,7 +7,20 @@ import { BioPanel, BriefPanel, SocialPanel } from '../../Panels';
 // import { MAXIMUM_SCREEN_HEIGHT } from '../../../../constants';
 
 const Screen = forwardRef(
-  ({ className, panel, panelSet, scrollDirection, showMenu, menuIndex, menuControls }, ref) => {
+  (
+    {
+      className,
+      panel,
+      panelSet,
+      scrollDirection,
+      showMenu,
+      menuIndex,
+      menuControls,
+      // perhaps create a panel state
+      socialPanelIndex,
+    },
+    ref,
+  ) => {
     useEffect(() => {
       // eslint-disable-next-line no-param-reassign
       ref.current.scrollTop = 0;
@@ -18,7 +31,7 @@ const Screen = forwardRef(
         case 1:
           switch (panel) {
             default:
-              return <SocialPanel ref={ref} scrollDirection={scrollDirection} />;
+              return <SocialPanel ref={ref} socialPanelIndex={socialPanelIndex} />;
           }
         default:
           switch (panel) {
@@ -77,6 +90,7 @@ Screen.propTypes = {
   showMenu: PropTypes.bool,
   menuIndex: PropTypes.number,
   menuControls: PropTypes.arrayOf(PropTypes.func),
+  socialPanelIndex: PropTypes.number,
 };
 
 Screen.defaultProps = {
@@ -96,6 +110,7 @@ Screen.defaultProps = {
       console.log('socials');
     },
   ],
+  socialPanelIndex: 0,
 };
 
 export default Screen;

@@ -5,6 +5,7 @@ import Input from '../Components/Input';
 import './Device.scss';
 
 const NUMBER_OF_PANELS = 1;
+const NUMBER_OF_SOCIAL_LINKS = 2;
 const MINIMUM_HORIZONTAL_VIEW_HEIGHT = 900;
 const MAXIMUM_HORIZONTAL_VIEW_WIDTH = 728;
 const MAXIMUM_MENU_INDEX = 1;
@@ -16,6 +17,7 @@ function Device({ classes }) {
   const [menuIndex, setMenuIndex] = useState(0);
   const [panelSet, setPanelSet] = useState(0);
   const [panelScrollDir, setPanelScrollDir] = useState('DOWN');
+  const [socialPanelIndex, setSocialPanelIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -60,18 +62,32 @@ function Device({ classes }) {
 
   const onUpPress = () => {
     if (!showMenu) {
-      if (panelRef.current) {
-        const scrollDistance = panelRef.current.scrollHeight * 0.33;
-        scroll(-1, scrollSpeed, scrollDistance, scrollStep);
+      switch (panelSet) {
+        case 1:
+          if (socialPanelIndex > 0) setSocialPanelIndex(socialPanelIndex - 1);
+          break;
+        default:
+          if (panelRef.current) {
+            const scrollDistance = panelRef.current.scrollHeight * 0.33;
+            scroll(-1, scrollSpeed, scrollDistance, scrollStep);
+          }
+          break;
       }
     } else if (menuIndex > 0) setMenuIndex(menuIndex - 1);
   };
 
   const onDownPress = () => {
     if (!showMenu) {
-      if (panelRef.current) {
-        const scrollDistance = panelRef.current.scrollHeight * 0.33;
-        scroll(1, scrollSpeed, scrollDistance, scrollStep);
+      switch (panelSet) {
+        case 1:
+          if (socialPanelIndex < NUMBER_OF_SOCIAL_LINKS) setSocialPanelIndex(socialPanelIndex + 1);
+          break;
+        default:
+          if (panelRef.current) {
+            const scrollDistance = panelRef.current.scrollHeight * 0.33;
+            scroll(1, scrollSpeed, scrollDistance, scrollStep);
+          }
+          break;
       }
     } else if (menuIndex < MAXIMUM_MENU_INDEX) setMenuIndex(menuIndex + 1);
   };
@@ -87,6 +103,18 @@ function Device({ classes }) {
       setPanelSet(mI);
       setShowMenu(false);
       setPanel(0);
+    }
+    // handle a button behavior based on panel set
+    switch (panelSet) {
+      case 1: {
+        const anchors = document
+          .getElementsByClassName('panel-social')[0]
+          .getElementsByTagName('a');
+        anchors[socialPanelIndex].click();
+        break;
+      }
+      default:
+        break;
     }
   };
 
@@ -107,7 +135,9 @@ function Device({ classes }) {
 
   const renderVerticalDevice = () => (
     <div className={`handheld flex flex-col shadow-lg ${classes}`}>
-      <h1 className="mt-auto w-full">forkball.games</h1>
+      <h1 className="mt-auto w-full">
+        <a href="https://forkball.games">forkball.games</a>
+      </h1>
       <div className="handheld__screen flex justify-center">
         <Screen
           ref={panelRef}
@@ -117,6 +147,7 @@ function Device({ classes }) {
           showMenu={showMenu}
           menuIndex={menuIndex}
           menuControls={menuControls}
+          socialPanelIndex={socialPanelIndex}
         />
       </div>
       <div className="handheld__input flex flex-col w-full h-full self-center">
@@ -135,7 +166,9 @@ function Device({ classes }) {
 
   const renderHorizontalDevice = () => (
     <div className={`handheld handheld--horizontal flex flex-col shadow-lg ${classes}`}>
-      <h1 className="w-full self-center">forkball.games</h1>
+      <h1 className="w-full self-center">
+        <a href="https://forkball.games">forkball.games</a>
+      </h1>
       <div className="handheld__input flex flex-col w-full h-full self-center items-center">
         <Input
           handleLeft={onLeftPress}
@@ -154,6 +187,7 @@ function Device({ classes }) {
               showMenu={showMenu}
               menuIndex={menuIndex}
               menuControls={menuControls}
+              socialPanelIndex={socialPanelIndex}
             />
           }
         />

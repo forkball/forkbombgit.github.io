@@ -4,4 +4,7 @@
     a {
         color: $color-panel-accent
     }
+    a.selected {
+        color: $color-device-secondary;
+    }
 }

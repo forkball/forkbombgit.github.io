@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Panels.scss';
 
 // eslint-disable-next-line no-unused-vars
-const SocialPanel = forwardRef(({ scrollDirection }, ref) => {
+const SocialPanel = forwardRef(({ socialPanelIndex }, ref) => {
   return (
     <div
       ref={ref}
@@ -12,15 +12,30 @@ const SocialPanel = forwardRef(({ scrollDirection }, ref) => {
       <div className="handheld-screen__interface__content__body flex flex-col text-left flex-1">
         <div className="flex flex-col flex-1 gap-2">
           <h2>TWITTER/</h2>
-          <a href="https://twitter.com/forkball_vg" target="_blank" rel="noreferrer">
+          <a
+            className={`${socialPanelIndex === 0 && 'selected'} `}
+            href="https://twitter.com/forkball_vg"
+            target="_blank"
+            rel="noreferrer"
+          >
             FORKBALL_VG
           </a>
           <h2 className="break-all">MASTODON/</h2>
-          <a href="https://mastodon.gamedev.place/@forkball" target="_blank" rel="noreferrer">
+          <a
+            className={`${socialPanelIndex === 1 && 'selected'} `}
+            href="https://mastodon.gamedev.place/@forkball"
+            target="_blank"
+            rel="noreferrer"
+          >
             FORKBALL
           </a>
           <h2>LINKEDIN/</h2>
-          <a href="https://www.linkedin.com/in/erosdipede/" target="_blank" rel="noreferrer">
+          <a
+            className={`${socialPanelIndex === 2 && 'selected'} `}
+            href="https://www.linkedin.com/in/erosdipede/"
+            target="_blank"
+            rel="noreferrer"
+          >
             EROS DI PEDE
           </a>
           <h2>EMAIL/</h2>
@@ -36,11 +51,11 @@ const SocialPanel = forwardRef(({ scrollDirection }, ref) => {
 });
 
 SocialPanel.propTypes = {
-  scrollDirection: PropTypes.string,
+  socialPanelIndex: PropTypes.number,
 };
 
 SocialPanel.defaultProps = {
-  scrollDirection: '',
+  socialPanelIndex: 0,
 };
 
 export default SocialPanel;
