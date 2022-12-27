@@ -23,9 +23,12 @@ const BioPanel = forwardRef(({ image, scrollDirection }, ref) => {
         <div className="handheld-screen__content__body flex flex-col text-left gap-2 hyphens">
           <p>Hey! </p>
           <p>
-            I&apos;m Eros, and I like making physical and digital games, and websites like this one!{' '}
+            I&apos;m Eros, and I like making physical and digital games, and websites like this one!
           </p>
-          <p>I earned a Bachelor of Computer Science from Carleton U. (Ottawa) in 2021. </p>
+          <p>
+            I earned a Bachelor of Computer Science from Carleton University (Ottawa, Canada) in
+            2021.
+          </p>
           <p>
             I&apos;m currently employed at a Else Labs (an IoT startup) doing fullstack software
             development.
