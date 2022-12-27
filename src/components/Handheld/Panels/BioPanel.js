@@ -20,7 +20,7 @@ const BioPanel = forwardRef(({ image, scrollDirection }, ref) => {
         <img src={image} alt="me" />
       </div>
       <div className="handheld-screen__interface__content__body flex flex-col">
-        <div className="handheld-screen__content__body flex flex-col text-left gap-2 hyphens">
+        <div className="handheld-screen__content__body flex flex-col text-left gap-4 hyphens">
           <p>Hey! </p>
           <p>
             I&apos;m Eros, and I like making physical and digital games, and websites like this one!
