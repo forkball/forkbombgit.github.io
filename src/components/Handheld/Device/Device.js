@@ -103,18 +103,19 @@ function Device({ classes }) {
       setPanelSet(mI);
       setShowMenu(false);
       setPanel(0);
-    }
-    // handle a button behavior based on panel set
-    switch (panelSet) {
-      case 1: {
-        const anchors = document
-          .getElementsByClassName('panel-social')[0]
-          .getElementsByTagName('a');
-        anchors[socialPanelIndex].click();
-        break;
+    } else {
+      // handle a button behavior based on panel set
+      switch (panelSet) {
+        case 1: {
+          const anchors = document
+            .getElementsByClassName('panel-social')[0]
+            .getElementsByTagName('a');
+          anchors[socialPanelIndex].click();
+          break;
+        }
+        default:
+          break;
       }
-      default:
-        break;
     }
   };
 

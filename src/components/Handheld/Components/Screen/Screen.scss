@@ -109,6 +109,8 @@
         }
       }
       &__body {
+          hyphens: auto;
+          margin-bottom: 16px;
           &__section {
             margin-bottom: 16px;
             h2 {

@@ -20,12 +20,21 @@ const BioPanel = forwardRef(({ image, scrollDirection }, ref) => {
         <img src={image} alt="me" />
       </div>
       <div className="handheld-screen__interface__content__body flex flex-col">
-        <div className="handheld-screen__content__body flex flex-col text-left">
+        <div className="handheld-screen__content__body flex flex-col text-left gap-2 hyphens">
+          <p>Hey! </p>
           <p>
-            In all areas of the stack, Eros is well equipped to address any challenge, whether it be
-            deve&shy;loping elegant, responsive websites, creating intuitive mobile application
-            experien&shy;ces, or building robust, efficient backend solutions.
+            I&apos;m Eros, and I like making physical and digital games, and websites like this one!{' '}
           </p>
+          <p>I earned a Bachelor of Computer Science from Carleton U. (Ottawa) in 2021. </p>
+          <p>
+            I&apos;m currently employed at a Else Labs (an IoT startup) doing fullstack software
+            development.
+          </p>
+          <p>
+            I also like comics, music, film, rock climbing, karate, and of course, playing physical
+            and digital games.
+          </p>
+          <p>Feel free to connect through my social platforms. [press start!]</p>
         </div>
       </div>
       <div className="handheld-screen__interface__content__page flex mt-auto">
