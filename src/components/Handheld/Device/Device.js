@@ -21,6 +21,8 @@ function Device({ classes }) {
   const [windowHeight, setWindowHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
 
+  const scrollDistances = { desktop: 0.33, mobile: 0.2 };
+
   const scrollSpeed = 25;
   const scrollStep = 25;
   const scrollBoundaryThreshold = 50;
@@ -68,7 +70,11 @@ function Device({ classes }) {
           break;
         default:
           if (panelRef.current) {
-            const scrollDistance = panelRef.current.scrollHeight * 0.33;
+            const multiplier =
+              windowWidth < MAXIMUM_HORIZONTAL_VIEW_WIDTH
+                ? scrollDistances.mobile
+                : scrollDistances.desktop;
+            const scrollDistance = panelRef.current.scrollHeight * multiplier;
             scroll(-1, scrollSpeed, scrollDistance, scrollStep);
           }
           break;
@@ -84,7 +90,11 @@ function Device({ classes }) {
           break;
         default:
           if (panelRef.current) {
-            const scrollDistance = panelRef.current.scrollHeight * 0.33;
+            const multiplier =
+              windowWidth < MAXIMUM_HORIZONTAL_VIEW_WIDTH
+                ? scrollDistances.mobile
+                : scrollDistances.desktop;
+            const scrollDistance = panelRef.current.scrollHeight * multiplier;
             scroll(1, scrollSpeed, scrollDistance, scrollStep);
           }
           break;
