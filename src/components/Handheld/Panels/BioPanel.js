@@ -37,7 +37,7 @@ const BioPanel = forwardRef(({ image, scrollDirection }, ref) => {
             I also like comics, music, film, rock climbing, karate, and of course, playing physical
             and digital games.
           </p>
-          <p>Feel free to connect through my social platforms. [press start!]</p>
+          <p>Feel free to connect through my social platforms!</p>
         </div>
       </div>
       <div className="handheld-screen__interface__content__page flex mt-auto">
