@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react';
 import Particles from 'react-particles';
+import PropTypes from 'prop-types';
 import { loadFull } from 'tsparticles';
 
-function ParticleBackground() {
+function ParticleBackground({ classes }) {
   const particlesInit = useCallback(async (engine) => {
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -13,6 +14,7 @@ function ParticleBackground() {
   return (
     <Particles
       id="particle-background"
+      className={classes}
       init={particlesInit}
       options={{
         background: {
@@ -45,14 +47,14 @@ function ParticleBackground() {
         },
         particles: {
           color: {
-            value: '#111D4A',
+            value: '#5EB715',
           },
           links: {
-            color: '#111D4A',
-            distance: 150,
+            color: '#5EB715',
+            distance: 200,
             enable: true,
-            opacity: 0.5,
-            width: 1,
+            opacity: 0.7,
+            width: 2,
           },
           collisions: {
             enable: true,
@@ -81,7 +83,7 @@ function ParticleBackground() {
             type: 'square',
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 5, max: 10 },
           },
         },
         detectRetina: true,
@@ -89,5 +91,13 @@ function ParticleBackground() {
     />
   );
 }
+
+ParticleBackground.propTypes = {
+  classes: PropTypes.string,
+};
+
+ParticleBackground.defaultProps = {
+  classes: '',
+};
 
 export default ParticleBackground;
