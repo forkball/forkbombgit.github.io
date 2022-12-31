@@ -12,9 +12,31 @@ const SocialPanel = forwardRef(({ socialPanelIndex }, ref) => {
       <div className="handheld-screen__interface__content__body flex flex-col text-left flex-1">
         <div className="flex flex-col flex-1 gap-4">
           <div>
-            <h2>TWITTER/</h2>
+            <h2>GITHUB/</h2>
             <a
               className={`${socialPanelIndex === 0 && 'selected'} `}
+              href="https://github.com/forkball"
+              target="_blank"
+              rel="noreferrer"
+            >
+              FORKBALL
+            </a>
+          </div>
+          <div>
+            <h2>LINKEDIN/</h2>
+            <a
+              className={`${socialPanelIndex === 1 && 'selected'} `}
+              href="https://www.linkedin.com/in/erosdipede/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              EROS DI PEDE
+            </a>
+          </div>
+          <div>
+            <h2>TWITTER/</h2>
+            <a
+              className={`${socialPanelIndex === 2 && 'selected'} `}
               href="https://twitter.com/forkball_vg"
               target="_blank"
               rel="noreferrer"
@@ -25,23 +47,12 @@ const SocialPanel = forwardRef(({ socialPanelIndex }, ref) => {
           <div>
             <h2 className="break-all">MASTODON/</h2>
             <a
-              className={`${socialPanelIndex === 1 && 'selected'} `}
+              className={`${socialPanelIndex === 3 && 'selected'} `}
               href="https://mastodon.gamedev.place/@forkball"
               target="_blank"
               rel="noreferrer"
             >
               FORKBALL
-            </a>
-          </div>
-          <div>
-            <h2>LINKEDIN/</h2>
-            <a
-              className={`${socialPanelIndex === 2 && 'selected'} `}
-              href="https://www.linkedin.com/in/erosdipede/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              EROS DI PEDE
             </a>
           </div>
           <div>

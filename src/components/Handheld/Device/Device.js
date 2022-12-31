@@ -5,7 +5,7 @@ import Input from '../Components/Input';
 import './Device.scss';
 
 const NUMBER_OF_PANELS = 1;
-const NUMBER_OF_SOCIAL_LINKS = 2;
+const NUMBER_OF_SOCIAL_LINKS = 3;
 const MINIMUM_HORIZONTAL_VIEW_HEIGHT = 900;
 const MAXIMUM_HORIZONTAL_VIEW_WIDTH = 728;
 const MAXIMUM_MENU_INDEX = 1;
