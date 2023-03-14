@@ -123,8 +123,6 @@
             @include mobile  {
               width: 52px;
               height: 52px;
-            }
-            @include tablet {
               @media (max-height: 700px) {
                 width: 48px;
                 height: 48px;
@@ -140,7 +138,7 @@
                 height: 56px;
               }
               // smallest mobile
-              @include tablet  {
+              @include mobile  {
                 width: 48px;
                 height: 48px;
                 @media (max-height: 700px) {
