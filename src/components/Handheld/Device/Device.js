@@ -209,7 +209,7 @@ function Device({ classes }) {
   useEffect(() => {
     setWindowHeight(window.innerHeight);
     setWindowWidth(window.innerWidth);
-  }, []);
+  }, [window]);
 
   if (windowHeight < MINIMUM_HORIZONTAL_VIEW_HEIGHT && windowWidth > MAXIMUM_HORIZONTAL_VIEW_WIDTH)
     return renderHorizontalDevice();

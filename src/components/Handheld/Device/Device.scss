@@ -9,25 +9,6 @@
     background-color: $color-device-primary;
     border-radius: 12px;
     border-left: 6px solid $color-black;
-    // horizontal handheld variant
-    &--horizontal {
-        gap: 0px;
-        max-width: 1100px;
-        padding: 16px;
-        min-height: unset;
-        .handheld__input {
-            max-width: unset;
-        }
-        h1 {
-            max-width: 576px;
-            @include tablet {
-                max-width: 392px;
-            }
-        }
-        @include tablet {
-            padding: 8px;
-        }
-    }
     h1 {
         color: $color-device-primary-dark;
         font-size: 16px;
@@ -42,6 +23,28 @@
         max-height: unset;
         border-left: unset;
         border-radius: 0px;
+        @media (max-height: 700px) {
+            gap: 4px;
+            a {
+                display: none;
+            }
+        }
+    }
+    // horizontal handheld variant
+    &--horizontal {
+        gap: 0px;
+        max-width: 1100px;
+        padding: 16px;
+        min-height: unset;
+        .handheld__input {
+            max-width: unset;
+        }
+        h1 {
+            justify-content: center;
+        }
+        @include tablet {
+            padding: 8px;
+        }
     }
     &__screen {
         padding: 8px;
