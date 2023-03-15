@@ -21,7 +21,7 @@ function Device({ classes }) {
   const [windowHeight, setWindowHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
 
-  const scrollDistances = { desktop: 0.33, mobile: 0.2 };
+  const scrollDistances = { desktop: 0.33, mobile: 0.15 };
 
   const scrollSpeed = 25;
   const scrollStep = 25;
