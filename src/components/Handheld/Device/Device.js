@@ -147,7 +147,7 @@ function Device({ classes }) {
   const renderVerticalDevice = () => (
     <div className={`handheld flex flex-col shadow-lg ${classes}`}>
       <h1 className="mt-auto w-full">
-        <a href="https://forkball.games">forkball.games</a>
+        <a href="https://forkball.ca">forkball</a>
       </h1>
       <div className="handheld__screen flex justify-center">
         <Screen
@@ -178,7 +178,7 @@ function Device({ classes }) {
   const renderHorizontalDevice = () => (
     <div className={`handheld handheld--horizontal flex flex-col shadow-lg ${classes}`}>
       <h1 className="w-full self-center">
-        <a href="https://forkball.games">forkball.games</a>
+        <a href="https://forkball.ca">forkball</a>
       </h1>
       <div className="handheld__input flex flex-col w-full h-full self-center items-center">
         <Input
