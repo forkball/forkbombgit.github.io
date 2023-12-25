@@ -8,7 +8,7 @@ const SocialPanel = forwardRef(({ socialPanelIndex }, ref) => {
       ref={ref}
       className="handheld-screen__interface__content panel-social flex flex-col h-full w-full overflow-y-auto"
     >
-      <div className="handheld-screen__interface__content__body flex flex-col text-left flex-1">
+      <div className="handheld-screen__interface__content__body flex flex-col text-left flex-1 mt-4">
         <div className="flex flex-col flex-1 gap-4">
           <div>
             <h2>GITHUB/</h2>
