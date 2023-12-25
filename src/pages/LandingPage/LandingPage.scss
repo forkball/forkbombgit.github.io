@@ -2,7 +2,7 @@
 @import "../../styles/mixins/breakpoints.scss";
 
 .landing {
-    height: 100vh;
+    height: 100%;
     min-height: 564px;
     @include tablet {
         min-height: 468px;

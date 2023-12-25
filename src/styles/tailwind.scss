@@ -29,7 +29,6 @@ p, .body {
   @include body;
 }
 
-body {
-  margin: 0;
-  overflow: hidden;
+html, body, #root, .App {
+  height: 100%;
 }

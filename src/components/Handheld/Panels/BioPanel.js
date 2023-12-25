@@ -11,8 +11,8 @@ const BioPanel = forwardRef(({ image, scrollDirection }, ref) => {
         id="landing-panel"
         className="handheld-screen__interface__content__heading flex flex-row"
       >
-        <span className="scroll-anchor mb-4" />
         <div className="flex flex-col mb-4">
+          <span className="scroll-anchor mb-4" />
           <h2>NAME/</h2>
           <p id="name">EROS DI PEDE</p>
           <span className="scroll-anchor mb-4" />
