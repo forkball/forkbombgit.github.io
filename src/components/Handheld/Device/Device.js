@@ -12,6 +12,9 @@ const MAXIMUM_MENU_INDEX = 1;
 function Device({ classes }) {
   const panelRef = useRef(null);
 
+  const [screenSections, setScreenSections] = useState({ 0: [], 1: [] });
+  const [sectionPosition, setSectionPosition] = useState(0);
+
   const [panel, setPanel] = useState(0);
   const [showMenu, setShowMenu] = useState(false);
   const [menuIndex, setMenuIndex] = useState(0);
@@ -21,47 +24,75 @@ function Device({ classes }) {
   const [windowHeight, setWindowHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
 
-  const scrollDistances = { desktop: 0.33, mobile: 0.15 };
+  // divide the screen into sections for better readability in scrolling
+  const setSections = () => {
+    const elements =
+      panel === 0
+        ? document.getElementsByClassName('scroll-anchor')
+        : document.getElementsByClassName('scroll-anchor');
 
-  const scrollSpeed = 25;
-  const scrollStep = 25;
-  const scrollBoundaryThreshold = 50;
+    // set section state
+    if (panel === 0)
+      setScreenSections({
+        ...screenSections,
+        [panel]: elements,
+      });
+    if (panel === 1)
+      setScreenSections({
+        ...screenSections,
+        [panel]: elements,
+      });
 
-  // handle vertical scroll behaviour
-  const scroll = (direction, speed, distance, step) => {
-    let scrollAmount = 0;
-    const { scrollTop, offsetHeight, scrollHeight } = panelRef.current;
-    const slideTimer = setInterval(() => {
-      panelRef.current.scrollTop += step * direction;
-      scrollAmount += step;
-      if (scrollAmount >= distance) {
-        window.clearInterval(slideTimer);
-        // change scroll direction text
-        const scrollPosition = Math.max(0, scrollHeight - (offsetHeight + scrollTop + distance));
-        if (scrollPosition < scrollBoundaryThreshold) {
-          if (direction === 1) setPanelScrollDir('UP');
-          else setPanelScrollDir('DOWN');
-        }
-      }
-    }, speed);
+    return elements;
   };
 
+  // handle vertical scroll behaviour
+  const scroll = (direction) => {
+    let sections = screenSections[panel];
+    if (screenSections[panel].length === 0) sections = setSections()[panel];
+    // scroll down
+    if (direction === 1) {
+      if (sectionPosition + 1 < sections.length) setSectionPosition(sectionPosition + 1);
+      sections[sectionPosition + 1].scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+    // scroll up
+    else if (direction === -1) {
+      if (sectionPosition - 1 >= 0) {
+        setSectionPosition(sectionPosition - 1);
+        sections[sectionPosition - 1].scrollIntoView({
+          behavior: 'smooth',
+        });
+      }
+    }
+
+    // set scroll direction on bottom tabular
+    if (direction === 1) setPanelScrollDir('UP');
+    else setPanelScrollDir('DOWN');
+  };
+
+  // navigate left
   const onLeftPress = () => {
     if (!showMenu) {
+      setSectionPosition(0);
       setPanelScrollDir('DOWN');
       if (panel > 0) setPanel(panel - 1);
       else setPanel(NUMBER_OF_PANELS);
     }
   };
 
+  // navigate right
   const onRightPress = () => {
     if (!showMenu) {
+      setSectionPosition(0);
       setPanelScrollDir('DOWN');
       if (panel < NUMBER_OF_PANELS) setPanel(panel + 1);
       else setPanel(0);
     }
   };
 
+  // navigate up
   const onUpPress = () => {
     if (!showMenu) {
       switch (panelSet) {
@@ -70,18 +101,14 @@ function Device({ classes }) {
           break;
         default:
           if (panelRef.current) {
-            const multiplier =
-              windowWidth < MAXIMUM_HORIZONTAL_VIEW_WIDTH
-                ? scrollDistances.mobile
-                : scrollDistances.desktop;
-            const scrollDistance = panelRef.current.scrollHeight * multiplier;
-            scroll(-1, scrollSpeed, scrollDistance, scrollStep);
+            scroll(-1);
           }
           break;
       }
     } else if (menuIndex > 0) setMenuIndex(menuIndex - 1);
   };
 
+  // navigate down
   const onDownPress = () => {
     if (!showMenu) {
       switch (panelSet) {
@@ -90,22 +117,19 @@ function Device({ classes }) {
           break;
         default:
           if (panelRef.current) {
-            const multiplier =
-              windowWidth < MAXIMUM_HORIZONTAL_VIEW_WIDTH
-                ? scrollDistances.mobile
-                : scrollDistances.desktop;
-            const scrollDistance = panelRef.current.scrollHeight * multiplier;
-            scroll(1, scrollSpeed, scrollDistance, scrollStep);
+            scroll(1);
           }
           break;
       }
     } else if (menuIndex < MAXIMUM_MENU_INDEX) setMenuIndex(menuIndex + 1);
   };
 
+  // show navigation menu on start press
   const onStartPress = () => {
     setShowMenu(!showMenu);
   };
 
+  // interact ui, selects items
   const onAButtonPress = (index = -1) => {
     if (showMenu) {
       let mI = menuIndex;
@@ -205,6 +229,10 @@ function Device({ classes }) {
       </div>
     </div>
   );
+
+  useEffect(() => {
+    setSections();
+  }, [panel]);
 
   useEffect(() => {
     setWindowHeight(window.innerHeight);

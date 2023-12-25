@@ -7,7 +7,8 @@ const BriefPanel = forwardRef(({ scrollDirection }, ref) => {
       ref={ref}
       className="handheld-screen__interface__content flex flex-col h-full w-full overflow-y-auto"
     >
-      <div className="handheld-screen__interface__content__body flex flex-col text-left gap-4">
+      <div className="handheld-screen__interface__content__body flex flex-col text-left">
+        <span className="scroll-anchor mb-4" />
         <div className="handheld-screen__interface__content__body__section">
           <h2>LANGUAGES/</h2>
           <ol className="list-disc list-inside">
@@ -19,6 +20,7 @@ const BriefPanel = forwardRef(({ scrollDirection }, ref) => {
             <li>HASKELL</li>
           </ol>
         </div>
+        <span className="scroll-anchor mb-4" />
         <div className="handheld-screen__interface__content__body__section">
           <h2>TOOLS/</h2>
           <ol className="list-disc list-inside">
@@ -31,6 +33,7 @@ const BriefPanel = forwardRef(({ scrollDirection }, ref) => {
             <li>POSTGRESQL</li>
           </ol>
         </div>
+        <span className="scroll-anchor mb-4" />
         <div className="handheld-screen__interface__content__body__section">
           <h2>HOBBIES/</h2>
           <ol className="list-disc list-inside">

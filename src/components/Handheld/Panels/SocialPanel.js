@@ -2,7 +2,6 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import './Panels.scss';
 
-// eslint-disable-next-line no-unused-vars
 const SocialPanel = forwardRef(({ socialPanelIndex }, ref) => {
   return (
     <div

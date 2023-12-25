@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import image from '../../../../assets/me.png';
 import './Screen.scss';
 import { BioPanel, BriefPanel, SocialPanel } from '../../Panels';
-// import { MAXIMUM_SCREEN_HEIGHT } from '../../../../constants';
 
 const Screen = forwardRef(
   (
