@@ -19,7 +19,6 @@ function Device({ classes }) {
   const [showMenu, setShowMenu] = useState(false);
   const [menuIndex, setMenuIndex] = useState(0);
   const [panelSet, setPanelSet] = useState(0);
-  const [panelScrollDir, setPanelScrollDir] = useState('DOWN');
   const [socialPanelIndex, setSocialPanelIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
@@ -66,17 +65,12 @@ function Device({ classes }) {
         });
       }
     }
-
-    // set scroll direction on bottom tabular
-    if (direction === 1) setPanelScrollDir('UP');
-    else setPanelScrollDir('DOWN');
   };
 
   // navigate left
   const onLeftPress = () => {
     if (!showMenu) {
       setSectionPosition(0);
-      setPanelScrollDir('DOWN');
       if (panel > 0) setPanel(panel - 1);
       else setPanel(NUMBER_OF_PANELS);
     }
@@ -86,7 +80,6 @@ function Device({ classes }) {
   const onRightPress = () => {
     if (!showMenu) {
       setSectionPosition(0);
-      setPanelScrollDir('DOWN');
       if (panel < NUMBER_OF_PANELS) setPanel(panel + 1);
       else setPanel(0);
     }
@@ -178,7 +171,6 @@ function Device({ classes }) {
           ref={panelRef}
           panel={panel}
           panelSet={panelSet}
-          scrollDirection={panelScrollDir}
           showMenu={showMenu}
           menuIndex={menuIndex}
           menuControls={menuControls}
@@ -218,7 +210,6 @@ function Device({ classes }) {
               ref={panelRef}
               panel={panel}
               panelSet={panelSet}
-              scrollDirection={panelScrollDir}
               showMenu={showMenu}
               menuIndex={menuIndex}
               menuControls={menuControls}

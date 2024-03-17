@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const BioPanel = forwardRef(({ image, scrollDirection }, ref) => {
+const BioPanel = forwardRef(({ image }, ref) => {
   return (
     <div
       ref={ref}
@@ -49,7 +49,6 @@ const BioPanel = forwardRef(({ image, scrollDirection }, ref) => {
         </div>
       </div>
       <div className="handheld-screen__interface__content__page flex mt-auto">
-        <p>{scrollDirection}</p>
         <p className="ml-auto">1/2</p>
       </div>
     </div>
@@ -58,7 +57,6 @@ const BioPanel = forwardRef(({ image, scrollDirection }, ref) => {
 
 BioPanel.propTypes = {
   image: PropTypes.string.isRequired,
-  scrollDirection: PropTypes.string.isRequired,
 };
 
 export default BioPanel;

@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 
-const BriefPanel = forwardRef(({ scrollDirection }, ref) => {
+const BriefPanel = forwardRef((_, ref) => {
   return (
     <div
       ref={ref}
@@ -47,15 +46,10 @@ const BriefPanel = forwardRef(({ scrollDirection }, ref) => {
         </div>
       </div>
       <div className="handheld-screen__interface__content__page flex mt-auto">
-        <p>{scrollDirection}</p>
         <p className="ml-auto">2/2</p>
       </div>
     </div>
   );
 });
-
-BriefPanel.propTypes = {
-  scrollDirection: PropTypes.string.isRequired,
-};
 
 export default BriefPanel;

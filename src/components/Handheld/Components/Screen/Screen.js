@@ -11,7 +11,6 @@ const Screen = forwardRef(
       className,
       panel,
       panelSet,
-      scrollDirection,
       showMenu,
       menuIndex,
       menuControls,
@@ -36,10 +35,10 @@ const Screen = forwardRef(
           switch (panel) {
             // overview panel
             case 1:
-              return <BriefPanel ref={ref} scrollDirection={scrollDirection} />;
+              return <BriefPanel ref={ref} />;
             // landing panel
             default:
-              return <BioPanel ref={ref} image={image} scrollDirection={scrollDirection} />;
+              return <BioPanel ref={ref} image={image} />;
           }
       }
     };
@@ -85,7 +84,6 @@ Screen.propTypes = {
   className: PropTypes.string,
   panel: PropTypes.number,
   panelSet: PropTypes.number,
-  scrollDirection: PropTypes.string,
   showMenu: PropTypes.bool,
   menuIndex: PropTypes.number,
   menuControls: PropTypes.arrayOf(PropTypes.func),
@@ -96,7 +94,6 @@ Screen.defaultProps = {
   className: '',
   panel: 0,
   panelSet: 0,
-  scrollDirection: 'DOWN',
   showMenu: false,
   menuIndex: 0,
   menuControls: [
