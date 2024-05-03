@@ -8,6 +8,7 @@ function Input({
   handleRight,
   handleUp,
   handleDown,
+  handleSelect,
   handleStart,
   handleA,
   handleB,
@@ -27,7 +28,12 @@ function Input({
       >
         <div className="handheld-input__navigation__controls col-start-2 ">
           <div className="button-wrapper">
-            <button className="font-roboto" type="button" aria-label="select" onClick={() => {}}>
+            <button
+              className="font-roboto"
+              type="button"
+              aria-label="select"
+              onClick={handleSelect}
+            >
               SELECT
             </button>
           </div>
@@ -177,6 +183,7 @@ Input.propTypes = {
   handleRight: PropTypes.func,
   handleUp: PropTypes.func,
   handleDown: PropTypes.func,
+  handleSelect: PropTypes.func,
   handleStart: PropTypes.func,
   handleA: PropTypes.func,
   handleB: PropTypes.func,
@@ -188,6 +195,7 @@ Input.defaultProps = {
   handleRight: () => {},
   handleUp: () => {},
   handleDown: () => {},
+  handleSelect: () => {},
   handleStart: () => {},
   handleA: () => {},
   handleB: () => {},

@@ -183,6 +183,7 @@ function Device({ classes }) {
           handleRight={onRightPress}
           handleDown={onDownPress}
           handleUp={onUpPress}
+          handleSelect={onStartPress}
           handleStart={onStartPress}
           handleA={onAButtonPress}
           handleB={onBButtonPress}
