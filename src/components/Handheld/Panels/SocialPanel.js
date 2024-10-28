@@ -33,25 +33,25 @@ const SocialPanel = forwardRef(({ socialPanelIndex }, ref) => {
             </a>
           </div>
           <div>
-            <h2>TWITTER/</h2>
+            <h2 className="break-all">BLUESKY/</h2>
             <a
               className={`${socialPanelIndex === 2 && 'selected'} `}
+              href="https://bsky.app/profile/forkball.bsky.social"
+              target="_blank"
+              rel="noreferrer"
+            >
+              FORKBALL
+            </a>
+          </div>
+          <div>
+            <h2>TWITTER/</h2>
+            <a
+              className={`${socialPanelIndex === 3 && 'selected'} `}
               href="https://twitter.com/forkball_vg"
               target="_blank"
               rel="noreferrer"
             >
               FORKBALL_VG
-            </a>
-          </div>
-          <div>
-            <h2 className="break-all">MASTODON/</h2>
-            <a
-              className={`${socialPanelIndex === 3 && 'selected'} `}
-              href="https://mastodon.gamedev.place/@forkball"
-              target="_blank"
-              rel="noreferrer"
-            >
-              FORKBALL
             </a>
           </div>
           <div>
