@@ -15,7 +15,6 @@ const BioPanel = forwardRef(({ image }, ref) => {
           <span className="scroll-anchor mb-4" />
           <h2>NAME/</h2>
           <p id="name">EROS DI PEDE</p>
-          <span className="scroll-anchor mb-4" />
           <h2>ROLES/</h2>
           <p>FULLSTACK AND GAME DEVELOPER</p>
         </div>
@@ -25,7 +24,6 @@ const BioPanel = forwardRef(({ image }, ref) => {
         <div className="handheld-screen__content__body flex flex-col text-left hyphens">
           <span className="scroll-anchor mb-2" />
           <p>Hey! </p>
-          <span className="scroll-anchor mb-4" />
           <p>
             I&apos;m Eros, and I like making physical and digital games, and websites like this one!
           </p>

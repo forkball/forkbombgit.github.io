@@ -51,16 +51,16 @@ function Device({ classes }) {
     if (screenSections[panel].length === 0) sections = setSections()[panel];
     // scroll down
     if (direction === 1) {
-      if (sectionPosition + 2 < sections.length) setSectionPosition(sectionPosition + 2);
-      sections[sectionPosition + 2].scrollIntoView({
+      if (sectionPosition + 1 < sections.length) setSectionPosition(sectionPosition + 1);
+      sections[sectionPosition + 1].scrollIntoView({
         behavior: 'smooth',
       });
     }
     // scroll up
     else if (direction === -1) {
-      if (sectionPosition - 2 >= 0) {
-        setSectionPosition(sectionPosition - 2);
-        sections[sectionPosition - 2].scrollIntoView({
+      if (sectionPosition - 1 >= 0) {
+        setSectionPosition(sectionPosition - 1);
+        sections[sectionPosition - 1].scrollIntoView({
           behavior: 'smooth',
         });
       }
