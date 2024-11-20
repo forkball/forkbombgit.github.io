@@ -36,7 +36,7 @@ const SocialPanel = forwardRef(({ socialPanelIndex }, ref) => {
             <h2 className="break-all">BLUESKY/</h2>
             <a
               className={`${socialPanelIndex === 2 && 'selected'} `}
-              href="https://bsky.app/profile/forkball.bsky.social"
+              href="https://bsky.app/profile/forkball.ca"
               target="_blank"
               rel="noreferrer"
             >
